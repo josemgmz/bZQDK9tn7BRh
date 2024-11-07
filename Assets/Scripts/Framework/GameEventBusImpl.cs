@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Framework
 {
-    public class GameEventBus : IGameEventBus
+    public class GameEventBusImpl : IGameEventBus
     {
         #region Custom type
 
@@ -127,7 +127,7 @@ namespace Framework
         
         #region Base Service Methods
 
-        private GameEventBus()
+        private GameEventBusImpl()
         {
             Initialize();
         }
@@ -138,7 +138,7 @@ namespace Framework
             _cancellationToken ??= new CancellationTokenSource();
         }
 
-        ~GameEventBus()
+        ~GameEventBusImpl()
         {
             _cancellationToken.Cancel();
             _cancellationToken = null;
