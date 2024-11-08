@@ -23,6 +23,9 @@ namespace Game.Services
         void StopAllSfx();
         void StopAllVoice();
         void StopAll();
+        public void SetMusicVolume(float volume);
+        public void SetSfxVolume(float volume);
+        public void SetVoiceVolume(float volume);
 
         #endregion
     }
