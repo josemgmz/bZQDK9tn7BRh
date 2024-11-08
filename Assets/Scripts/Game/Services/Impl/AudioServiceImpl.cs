@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Framework;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -21,6 +22,7 @@ namespace Game.Services.Impl
         private const string AUDIO_MIXER_GROUP_MUSIC = "Music";
         private const string AUDIO_MIXER_GROUP_SFX = "SFX";
         private const string AUDIO_MIXER_GROUP_VOICE = "Voice";
+        private const string AUDIO_MIXER_GROUP_MASTER = "Master";
         private const uint MAX_SFX_SOURCES = 10;
         private const uint MAX_MUSIC_SOURCES = 2;
         private const uint MAX_VOICE_SOURCES = 2;
@@ -216,6 +218,36 @@ namespace Game.Services.Impl
         private AudioMixerGroup GetAudioMixerGroup(string groupName)
         {
             return _audioMixer.FindMatchingGroups(groupName).First();
+        }
+
+        #endregion
+
+        #region Configuration Methods
+
+        public async void SetMusicVolume(float volume)
+        {
+            //Unity 2021 seems to have a bug with _audioMixer the first tick after the game starts is not able to set
+            //the volume, so we add a more or less one tick of delay 
+            await Task.Yield();
+            _audioMixer.SetFloat(AUDIO_MIXER_GROUP_MUSIC, volume);
+        }
+        
+        public async void SetSfxVolume(float volume)
+        {
+            await Task.Yield();
+            _audioMixer.SetFloat(AUDIO_MIXER_GROUP_SFX, volume);
+        }
+        
+        public async void SetVoiceVolume(float volume)
+        {
+            await Task.Yield();
+            _audioMixer.SetFloat(AUDIO_MIXER_GROUP_VOICE, volume);
+        }
+        
+        public async void SetMasterVolume(float volume)
+        {
+            await Task.Yield();
+            _audioMixer.SetFloat(AUDIO_MIXER_GROUP_MASTER, volume);
         }
 
         #endregion
