@@ -39,45 +39,45 @@ namespace Game.Tests.TestFramework
         
         #region Input
 
-        public void StartTouch(Vector3 position, bool isInWorldSpace = false, int index = 0)
+        public void StartTouch(Vector3 position, RenderMode renderMode = RenderMode.ScreenSpaceOverlay, int index = 0)
         {
-            var startPosition = ConvertToScreenPosition(position, isInWorldSpace);
-            DrawDebugLines(startPosition);
+            var startPosition = ConvertToScreenPosition(position, renderMode);
+            DrawDebugLines(renderMode != RenderMode.ScreenSpaceCamera ? startPosition : position);
             BeginTouch(index, startPosition, screen: GetTouchscreen());
         }
 
-        public void UpdateTouch(Vector3 position, bool isInWorldSpace = false, int index = 0)
+        public void UpdateTouch(Vector3 position, RenderMode renderMode = RenderMode.ScreenSpaceOverlay, int index = 0)
         {
-            var currentPosition = ConvertToScreenPosition(position, isInWorldSpace);
-            DrawDebugLines(currentPosition);
+            var currentPosition = ConvertToScreenPosition(position, renderMode);
+            DrawDebugLines(renderMode != RenderMode.ScreenSpaceCamera ? currentPosition : position);
             MoveTouch(index, currentPosition, screen: GetTouchscreen());
         }
 
-        public void StopTouch(Vector3 position, bool isInWorldSpace = false, int index = 0)
+        public void StopTouch(Vector3 position, RenderMode renderMode = RenderMode.ScreenSpaceOverlay, int index = 0)
         {
-            EndTouch(index, ConvertToScreenPosition(position, isInWorldSpace), screen: GetTouchscreen());
+            EndTouch(index, ConvertToScreenPosition(position, renderMode), screen: GetTouchscreen());
         }
 
-        public IEnumerator PerformDrag(Vector3 initialPosition, Vector3 targetPosition, float duration, bool isInWorldSpace = false)
+        public IEnumerator PerformDrag(Vector3 initialPosition, Vector3 targetPosition, float duration, RenderMode renderMode = RenderMode.ScreenSpaceOverlay)
         {
-            StartTouch(initialPosition, isInWorldSpace);
+            StartTouch(initialPosition, renderMode);
             var elapsedTime = 0f;
             while (elapsedTime < duration)
             {
                 float t = elapsedTime / duration;
                 Vector3 newPosition = Vector3.Lerp(initialPosition, targetPosition, t);
-                UpdateTouch(newPosition, isInWorldSpace);
+                UpdateTouch(newPosition, renderMode);
 
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
-            StopTouch(targetPosition, isInWorldSpace);
+            StopTouch(targetPosition, renderMode);
             yield return new WaitForSecondsRealtime(0.1f);
         }
 
-        private Vector3 ConvertToScreenPosition(Vector3 input, bool isInWorldSpace = false)
+        private Vector3 ConvertToScreenPosition(Vector3 input, RenderMode renderMode = RenderMode.ScreenSpaceOverlay)
         {
-            return isInWorldSpace ? Camera.main!.WorldToScreenPoint(input) : input;
+            return renderMode != RenderMode.ScreenSpaceOverlay ? Camera.main!.WorldToScreenPoint(input) : input;
         }
 
         private void DrawDebugLines(Vector3 position)

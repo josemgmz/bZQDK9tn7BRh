@@ -33,14 +33,14 @@ namespace Game.Tests.E2ETest.Card
             var startRotation = transform.rotation;
             var endRotation = transform.rotation * Quaternion.Euler(0, -180, 0);
             yield return new WaitForSeconds(2.0f);
-            yield return PerformDrag(transform.position, transform.position + Vector3.down, 0.25f, true);
+            yield return PerformDrag(transform.position, transform.position + Vector3.down, 0.25f, RenderMode.ScreenSpaceCamera);
             yield return new WaitForSeconds(1.0f);
             //Compare the rotation of the card to the original rotation it should be flipped 180 degrees
             Assert.AreEqual(endRotation.eulerAngles.y, transform.rotation.eulerAngles.y);
             Debug.Log("Card Flipped");
             
             
-            yield return PerformDrag(transform.position, transform.position + Vector3.down, 0.25f, true);
+            yield return PerformDrag(transform.position, transform.position + Vector3.down, 0.25f, RenderMode.ScreenSpaceCamera);
             yield return new WaitForSeconds(1.0f);
             Assert.AreEqual(startRotation.eulerAngles.y, transform.rotation.eulerAngles.y);
             Debug.Log("Card Flipped Back");
