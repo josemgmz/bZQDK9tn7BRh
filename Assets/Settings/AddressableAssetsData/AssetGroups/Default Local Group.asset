@@ -29,6 +29,14 @@ MonoBehaviour:
     m_Address: Assets/Content/Sound/SFX/cardFlip.mp3
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: ae919debf38b06444b93b2bc70af31e1
+    m_Address: Assets/Content/Prefabs/Card.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2eab39c90566eeb40b3fe2f9a8dc4f45
+    m_Address: Assets/Content/Prefabs/GameDependencySystem.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: b11fa10cccb15a64ca810574badbdcfa, type: 2}
   m_SchemaSet:

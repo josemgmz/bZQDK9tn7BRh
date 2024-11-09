@@ -1,16 +1,14 @@
 {
-    "name": "FrameworkE2ETest",
+    "name": "TestFramework",
     "rootNamespace": "",
     "references": [
+        "Framework",
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "Framework"
+        "Unity.InputSystem",
+        "Unity.InputSystem.TestFramework"
     ],
-    "includePlatforms": [
-        "Android",
-        "Editor",
-        "iOS"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
