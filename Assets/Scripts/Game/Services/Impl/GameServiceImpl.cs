@@ -33,6 +33,7 @@ namespace Game.Services.Impl
         private void SetupMusic()
         { 
             _audioService.SetMusicVolume(-35.0f);
+            _audioService.SetSfxVolume(-10.0f);
             _audioService.PlayMusic(BACKGROUND_MUSIC, true);
         }
 
