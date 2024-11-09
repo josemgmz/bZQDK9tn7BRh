@@ -6,10 +6,10 @@ namespace Game.Entities.Card
     {
         Spade = 0,
         Heart = 1,
-        Diamond = 3,
-        Club = 4,
-        Back = 5,
-        None = 6
+        Diamond = 2,
+        Club = 3,
+        Back = 4,
+        None = 5
     }
     
     public static class CardShapeExtension
