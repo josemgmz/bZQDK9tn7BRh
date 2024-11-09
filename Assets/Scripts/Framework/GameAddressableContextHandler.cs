@@ -37,16 +37,12 @@ namespace Framework
             var request = _LoadAssetsAsync<TObject>(keys);
             _requestHandles.Add(request);
             var result = request.WaitForCompletion();
-            return result.ToList();
+            return result.Select(Object.Instantiate).ToList();
         }
         
         public TObject LoadAsset<TObject>(string key) where TObject : Object
         {
-            
-            var request = _LoadAssetsAsync<TObject>(new List<string> { key });
-            _requestHandles.Add(request);
-            var result = request.WaitForCompletion();
-            return result.FirstOrDefault();
+            return LoadAssets<TObject>(new List<string> { key }).First();
         }
         
         public void Release()

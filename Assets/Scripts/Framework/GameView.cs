@@ -110,7 +110,7 @@ namespace Framework
             });
         }
 
-        private async void InitializeControllerAttributes(bool force = false)
+        private void InitializeControllerAttributes(bool force = false)
         {
             _gameMethods = new GameMethods();
             _rawControllers = new Dictionary<Type, object>();
