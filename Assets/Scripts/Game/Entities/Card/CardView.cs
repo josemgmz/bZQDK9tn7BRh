@@ -8,6 +8,7 @@ namespace Game.Entities.Card
         #region Variables
 
         [GameFieldAttributes.ModelField, SerializeField] private CardModel _model;
+        [GameFieldAttributes.ControllerField] private CardImageController _imageController;
         [GameFieldAttributes.ControllerField] private CardAnimationController _animationController;
 
         #endregion

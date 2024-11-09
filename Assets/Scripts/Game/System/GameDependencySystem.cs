@@ -15,6 +15,7 @@ namespace Game.System
             builder.Register<IGameEventBus, GameEventBusImpl>(Lifetime.Singleton);
             builder.Register<ILogService, LogServiceImpl>(Lifetime.Singleton);
             builder.Register<IStartableService, IStoppableService, IAudioService, AudioServiceImpl>(Lifetime.Singleton);
+            builder.Register<IStoppableService, IGameAddressablesService, GameAddressablesServiceImpl>(Lifetime.Singleton);
             
             //Register Game Service
             builder.Register<IStartableService, IGameService, GameServiceImpl>(Lifetime.Singleton);

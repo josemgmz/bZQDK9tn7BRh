@@ -27,7 +27,6 @@ namespace Game.Entities.Card
         [Range(0f, 1f)] [SerializeField] private float rotationTime = 0.25f;
         [SerializeField] private CardType cardType;
         [SerializeField] private CardShape cardShape;
-        [SerializeField] private CardColor cardColor;
         [SerializeField] private bool isFlipped;
         
         private Coroutine _flipCardCoroutine;
@@ -35,11 +34,23 @@ namespace Game.Entities.Card
         #endregion
 
         #region Properties
-
+        
+        public CardType CardType => cardType;
+        public CardShape CardShape => cardShape;
         public Image Image => image;
         public float RotationTime => rotationTime;
-        public Sprite FrontSprite => frontSprite;
-        public Sprite BackSprite => backSprite;
+        public Sprite FrontSprite
+        {
+            get => frontSprite;
+            set => frontSprite = value;
+        }
+
+        public Sprite BackSprite
+        {
+            get => backSprite;
+            set => backSprite = value;
+        }
+
         public Coroutine FlipCardCoroutine
         {
             get => _flipCardCoroutine;
@@ -55,12 +66,11 @@ namespace Game.Entities.Card
 
         #region Methods
 
-        public void Initialize<T>(params object[] value)
+        public void Initialize(CardShape a, CardType b, bool c)
         {
-            cardShape = (CardShape) value[0];
-            cardColor = (CardColor) value[1];
-            cardType = (CardType) value[2];
-            isFlipped = (bool) value[3];
+            cardShape = a;
+            cardType = b;
+            isFlipped = c;
         }
 
         #endregion

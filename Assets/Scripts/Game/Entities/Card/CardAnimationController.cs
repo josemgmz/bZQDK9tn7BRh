@@ -18,7 +18,7 @@ namespace Game.Entities.Card
         
         #region Lifecycle
 
-        private void Awake()
+        private void Start()
         {
             //Setup the face of the card
             var model = GetModel<CardModel>();

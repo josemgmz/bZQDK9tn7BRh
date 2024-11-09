@@ -21,6 +21,11 @@ namespace Game.Helper
             m_ConstraintCount = columns;
         }
         
+        public void SetSpacing(Vector2 spacing)
+        {
+            m_ElementsSpacing = spacing;
+        }
+        
         public override void CalculateLayoutInputHorizontal()
         {
             base.CalculateLayoutInputHorizontal();
