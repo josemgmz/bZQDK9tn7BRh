@@ -37,6 +37,246 @@ MonoBehaviour:
     m_Address: Assets/Content/Prefabs/GameDependencySystem.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 9ad0a646eb55cf44fac35786a2db234a
+    m_Address: Assets/Content/Textures/Cards/clubs_queen.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2e1652474d897034485f82881c2cecfe
+    m_Address: Assets/Content/Textures/Cards/back01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 77aff3521321469479fef0294aa754f7
+    m_Address: Assets/Content/Textures/Cards/clubs_02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0d6600af7d781a74999065c0fc3bb6ae
+    m_Address: Assets/Content/Textures/Cards/back03.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0cc9b68efa88f7341a6bb45a44b0e138
+    m_Address: Assets/Content/Textures/Cards/back02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cb1d98a57bbec104b8507d7742f9a197
+    m_Address: Assets/Content/Textures/Cards/back04.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 80d07777b494bf848b18b9948b2dbd0a
+    m_Address: Assets/Content/Textures/Cards/back05.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b8688761269966448ae6b1c652a2bee3
+    m_Address: Assets/Content/Textures/Cards/back06.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 33396855542f3fb40a2d7a13aabb1148
+    m_Address: Assets/Content/Textures/Cards/back07.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fc81b74133f86bd408b77e6d4db22ba8
+    m_Address: Assets/Content/Textures/Cards/back08.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 490d84b7bdb21a945a50862bce20d1c2
+    m_Address: Assets/Content/Textures/Cards/clubs_03.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2de9961048a434644bc9af107b3a736d
+    m_Address: Assets/Content/Textures/Cards/clubs_04.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5a4e849109c7aa64e98c0b0cbee96565
+    m_Address: Assets/Content/Textures/Cards/clubs_05.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c3cb4800239f1fc42a8e04847f0ad1fe
+    m_Address: Assets/Content/Textures/Cards/clubs_06.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6a3713926822cd444aa8d0bcfabc92e6
+    m_Address: Assets/Content/Textures/Cards/clubs_07.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a5325d546b0964c4692ab69642b531f9
+    m_Address: Assets/Content/Textures/Cards/clubs_08.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bd746cb2c65acc149b9497abbf11a6f1
+    m_Address: Assets/Content/Textures/Cards/clubs_09.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ddbaa436d5beb7d4fa7ee95a8ce2d2ce
+    m_Address: Assets/Content/Textures/Cards/clubs_10.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 34eab001441315f41a50339f269c3b82
+    m_Address: Assets/Content/Textures/Cards/clubs_ace.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4176736df2cd8914ab0368fe60ff3f95
+    m_Address: Assets/Content/Textures/Cards/clubs_jack.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8b9d508f8d3564041b31e1302ae1509e
+    m_Address: Assets/Content/Textures/Cards/clubs_king.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9bb72c3fc2fc0b8428c7bbc53ba8b0d0
+    m_Address: Assets/Content/Textures/Cards/diamonds_02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 261c94bed5c1eb04bbbb60d962ee7f2b
+    m_Address: Assets/Content/Textures/Cards/diamonds_03.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8348264c2a556534497ac6f3f05bbdcd
+    m_Address: Assets/Content/Textures/Cards/diamonds_04.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0bace2b179e734f43a8dc736d2dde5b2
+    m_Address: Assets/Content/Textures/Cards/diamonds_05.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 82c9c9ab39d8f9c4dbf6d9908ca21e59
+    m_Address: Assets/Content/Textures/Cards/diamonds_06.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cf2c966d19fd9dd498bc964271d03063
+    m_Address: Assets/Content/Textures/Cards/diamonds_07.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a2fe7e365f694ac4e9ad3e2928893b5d
+    m_Address: Assets/Content/Textures/Cards/diamonds_08.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b0f938400923d7441aecb7277de5a97e
+    m_Address: Assets/Content/Textures/Cards/diamonds_09.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a1bcb7d72d8fb17408d2ab5d70c53030
+    m_Address: Assets/Content/Textures/Cards/diamonds_10.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7d2d735c5bd87a8479548067a81b2ca6
+    m_Address: Assets/Content/Textures/Cards/diamonds_ace.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 27e80633a96424b4aa1ddffb303cdd2d
+    m_Address: Assets/Content/Textures/Cards/diamonds_jack.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c071eccf49d782c4488a49d6b39016b3
+    m_Address: Assets/Content/Textures/Cards/diamonds_king.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 918446547eb03ab438718a17775d27fc
+    m_Address: Assets/Content/Textures/Cards/diamonds_queen.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3159653d0fca1eb45952ac47fab430fc
+    m_Address: Assets/Content/Textures/Cards/hearts_02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f8387bdb07fd6fd4baaebd4f7ecd537f
+    m_Address: Assets/Content/Textures/Cards/hearts_03.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 53e6dd851849bcc4085b1147a7af5369
+    m_Address: Assets/Content/Textures/Cards/hearts_04.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 31f647039f9dec04c8f9b5f62b9a62d9
+    m_Address: Assets/Content/Textures/Cards/hearts_05.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 05712690ad5de8f458ee1b4a004b40ea
+    m_Address: Assets/Content/Textures/Cards/hearts_06.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7304ebef18de72d4aa8bff834fd5fec8
+    m_Address: Assets/Content/Textures/Cards/hearts_07.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 96a550a392ad8b545b7406ba5b0efbb3
+    m_Address: Assets/Content/Textures/Cards/hearts_08.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a00599b18a1ad594bab1bb293989abc8
+    m_Address: Assets/Content/Textures/Cards/hearts_09.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 49e62663769e6f8449e3cb43c60c1d80
+    m_Address: Assets/Content/Textures/Cards/hearts_10.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4ac6f2860c775f44f8118586dee0a6d5
+    m_Address: Assets/Content/Textures/Cards/hearts_ace.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 086955f2d15152844bbac4e6637c772b
+    m_Address: Assets/Content/Textures/Cards/hearts_jack.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f870f0e176793a34d93154d4f97d772e
+    m_Address: Assets/Content/Textures/Cards/hearts_king.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 602e374bda25fd84ea81065303045d88
+    m_Address: Assets/Content/Textures/Cards/hearts_queen.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fd4b3b3c7c823cb49aaac92aa86778d7
+    m_Address: Assets/Content/Textures/Cards/spades_02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 400279782f1ae6f4e825081d4bf2ac76
+    m_Address: Assets/Content/Textures/Cards/spades_03.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 147b6be7ac5d39f429bad3ee7159302f
+    m_Address: Assets/Content/Textures/Cards/spades_04.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 95cea61cd3f2fdf44a4a453282b3969a
+    m_Address: Assets/Content/Textures/Cards/spades_05.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a5961507aa265ef43b0c162b21f731df
+    m_Address: Assets/Content/Textures/Cards/spades_06.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b41631206567498418af0157504b867d
+    m_Address: Assets/Content/Textures/Cards/spades_07.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8a702f5e4e65f684eacb12ccc01d7506
+    m_Address: Assets/Content/Textures/Cards/spades_08.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d174a58346be9bb4f9b8d7698c9269ac
+    m_Address: Assets/Content/Textures/Cards/spades_09.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8dbe3282dd0857c4d9f5c0d1caf02481
+    m_Address: Assets/Content/Textures/Cards/spades_10.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d384bdc83757a9544859cb74b74d8a33
+    m_Address: Assets/Content/Textures/Cards/spades_ace.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 20df80dabd1e3774ba6a61e5f32842cf
+    m_Address: Assets/Content/Textures/Cards/spades_jack.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8134af542bf0e81498f27013b03feeac
+    m_Address: Assets/Content/Textures/Cards/spades_king.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 03d10be812a56f1458910ad40b1156c9
+    m_Address: Assets/Content/Textures/Cards/spades_queen.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: b11fa10cccb15a64ca810574badbdcfa, type: 2}
   m_SchemaSet:
