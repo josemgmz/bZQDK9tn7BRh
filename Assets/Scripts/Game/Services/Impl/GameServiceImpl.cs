@@ -15,7 +15,7 @@ namespace Game.Services.Impl
 
         #region Lifecycle
         
-        public async void Start()
+        public void Start()
         {
             SetupMusic();
             _logService.Log("GameService initialized");

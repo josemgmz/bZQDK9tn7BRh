@@ -1,0 +1,28 @@
+{
+    "name": "GameE2ETest",
+    "rootNamespace": "",
+    "references": [
+        "GUID:27619889b8ba8c24980f49ee34dbb44a",
+        "GUID:0acc523941302664db1f4e527237feb3",
+        "GUID:6d11411901fb4c3782d0030dd0c313ae",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:9e24947de15b9834991c9d8411ea37cf",
+        "GUID:15e9fcab3fcd48dd81e359a195ec7476",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:dc04f38471c3a459fb4d31124ee9127d",
+        "GUID:0c13470e41f84081a5f9cb6ec91c8aa6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
