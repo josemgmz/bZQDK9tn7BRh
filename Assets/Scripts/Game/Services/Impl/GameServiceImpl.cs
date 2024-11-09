@@ -1,4 +1,5 @@
-﻿using VContainer;
+﻿using System.Threading.Tasks;
+using VContainer;
 
 namespace Game.Services.Impl
 {
@@ -8,6 +9,7 @@ namespace Game.Services.Impl
         
         [Inject] private ILogService _logService;
         [Inject] private IAudioService _audioService;
+        [Inject] private IRoundService _roundService;
         
         private const string BACKGROUND_MUSIC = "backgroundMusic.mp3";
 
@@ -15,10 +17,12 @@ namespace Game.Services.Impl
 
         #region Lifecycle
         
-        public void Start()
+        public async void Start()
         {
             SetupMusic();
             _logService.Log("GameService initialized");
+            await Task.Delay(250);
+            _roundService.StartRound();
         }
 
         public void Tick()
