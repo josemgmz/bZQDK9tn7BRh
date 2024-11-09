@@ -17,32 +17,31 @@ namespace Framework
 
         #region Public Methods
 
-        public async Task<List<TObject>> LoadAssetsAsync<TObject>(List<string> keys) where TObject : Object
+        public async Task<List<TObject>> LoadAssetsAsync<TObject>(List<string> keys, bool instantiate = true) where TObject : Object
         {
             var request = _LoadAssetsAsync<TObject>(keys);
             _requestHandles.Add(request);
             var result = await request.Task;
-            var instances = result.Select(Object.Instantiate).ToList();
-            return instances;
+            return instantiate ? result.Select(Object.Instantiate).ToList() : result.ToList();
         }
         
-        public async Task<TObject> LoadAssetAsync<TObject>(string key) where TObject : Object
+        public async Task<TObject> LoadAssetAsync<TObject>(string key, bool instantiate = true) where TObject : Object
         {
-            var result = await LoadAssetsAsync<TObject>(new List<string> { key });
+            var result = await LoadAssetsAsync<TObject>(new List<string> { key }, instantiate);
             return result.FirstOrDefault();
         }
         
-        public List<TObject> LoadAssets<TObject>(List<string> keys) where TObject : Object
+        public List<TObject> LoadAssets<TObject>(List<string> keys, bool instantiate = true) where TObject : Object
         {
             var request = _LoadAssetsAsync<TObject>(keys);
             _requestHandles.Add(request);
             var result = request.WaitForCompletion();
-            return result.Select(Object.Instantiate).ToList();
+            return instantiate ? result.Select(Object.Instantiate).ToList() : result.ToList();
         }
         
-        public TObject LoadAsset<TObject>(string key) where TObject : Object
+        public TObject LoadAsset<TObject>(string key, bool instantiate = true) where TObject : Object
         {
-            return LoadAssets<TObject>(new List<string> { key }).First();
+            return LoadAssets<TObject>(new List<string> { key }, instantiate).First();
         }
         
         public void Release()
