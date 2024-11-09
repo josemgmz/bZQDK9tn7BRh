@@ -185,7 +185,7 @@ namespace Game.Services.Impl
             Object.DontDestroyOnLoad(_audioContainer);
 
             // Create audio mixer
-            _audioMixer = _addressableContext.LoadAsset<AudioMixer>(AUDIO_MIXER_PATH);
+            _audioMixer = _addressableContext.LoadAsset<AudioMixer>(AUDIO_MIXER_PATH, false);
 
             // Create audio sources
             for (var i = 0; i < MAX_MUSIC_SOURCES; i++)
