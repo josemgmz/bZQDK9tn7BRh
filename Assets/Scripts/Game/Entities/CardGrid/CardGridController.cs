@@ -1,41 +1,57 @@
 ﻿using System.Collections.Generic;
 using Framework;
 using Game.Entities.Card;
+using Game.Helper;
 using UnityEngine;
+using VContainer;
 
 namespace Game.Entities.CardGrid
 {
     public class CardGridController : GameController<GameViewUI>
     {
+        #region Lifecycle
+
+        [Inject] private IGameEventBus _eventBus;
+
+        #endregion
+        
         #region Lifecycle Methods
 
         private void Awake()
         {
-            var exampleList = new List<CardSetupRequest>
-            {
-                new CardSetupRequest { CardShape = CardShape.Club, CardType = CardType.Eight },
-                new CardSetupRequest{ CardShape = CardShape.Diamond, CardType = CardType.Five },
-            };
-            CreateGrid(2, exampleList);
+            _eventBus.AddListener<CardGridSetupRequest>(CreateGrid);
+        }
+        
+        private void OnDestroy()
+        {
+            _eventBus.RemoveListener<CardGridSetupRequest>(CreateGrid);
         }
 
         #endregion
 
         #region Methods
 
-        private void CreateGrid(int columns, List<CardSetupRequest> cards)
+        private void CreateGrid(CardGridSetupRequest request)
         {
             //Get model
             var model = GetModel<CardGridModel>();
-            model.ResponsiveGridLayout.SetColumns(columns);
+            model.ResponsiveGridLayout.SetColumns(request.Columns);
             model.ResponsiveGridLayout.SetSpacing(model.Spacing);
             
             //Create the grid.
-            cards.ForEach(it =>
+            request.Cards.ForEach(it =>
             {
                 CreateCard(model.CardPrefab, it);
                 CreateCard(model.CardPrefab, it);
             });
+            
+            //Shuffle the cards
+            if (!request.Shuffle) return;
+            var children = new List<Transform>();
+            for (var i = 0; i < transform.childCount; i++)
+                children.Add(transform.GetChild(i));
+            children.Shuffle();
+            children.ForEach(it => it.SetSiblingIndex(0));
         }
 
         private void CreateCard(GameObject cardPrefab, CardSetupRequest it)
