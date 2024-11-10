@@ -67,6 +67,14 @@ namespace Framework
             }
         }
         
+        internal async void _forceRemoveListeners(Type type)
+        {
+            await Task.Yield();
+            if (!_eventHandlers.TryGetValue(type, out var handlers)) return;
+            handlers.Clear();
+            _eventHandlers.Remove(type);
+        }
+        
         public void AddListener<T>(Action<T> listener, GameController<GameView> owner = null) => _addListener(typeof(T), listener, owner);
         
         public void AddListener<T>(Action listener, GameController<GameView> owner = null) => _addListener(typeof(T), listener, owner);
@@ -79,6 +87,8 @@ namespace Framework
         public void RemoveListener<T>(Action<T> listener) => _removeListener(typeof(T), listener);
         
         public void RemoveListener<T>(Action listener) => _removeListener(typeof(T), listener);
+        public void RemoveListeners<T>() => _forceRemoveListeners(typeof(T));
+
         public void RemoveListener(Action listener, Type type) => _removeListener(type, listener);
 
         

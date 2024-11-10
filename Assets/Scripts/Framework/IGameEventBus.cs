@@ -14,6 +14,7 @@ namespace Framework
         
         void RemoveListener<T>(Action<T> listener);
         void RemoveListener<T>(Action listener);
+        void RemoveListeners<T>();
         void RemoveListener(Action listener, Type type);
         void RemoveListener<T>(Func<IEnumerator> listener);
         void RemoveListener<T>(Func<T, IEnumerator> listener);
