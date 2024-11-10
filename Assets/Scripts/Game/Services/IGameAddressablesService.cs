@@ -1,4 +1,5 @@
 ﻿using Game.Entities.Card;
+using Game.Entities.Card.Data;
 using Game.Services.Lifetime;
 using UnityEngine;
 

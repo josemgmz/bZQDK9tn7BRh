@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Framework;
 using Game.Entities.Card;
+using Game.Entities.Card.Data;
 using Game.Helper;
 using UnityEngine;
 using VContainer;

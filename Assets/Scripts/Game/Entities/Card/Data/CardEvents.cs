@@ -1,6 +1,6 @@
 ﻿using UnityEngine.Events;
 
-namespace Game.Entities.Card
+namespace Game.Entities.Card.Data
 {
     public class OnCardSetupEvent
     {

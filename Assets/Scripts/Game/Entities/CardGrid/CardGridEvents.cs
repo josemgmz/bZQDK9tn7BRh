@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Game.Entities.Card;
+using Game.Entities.Card.Data;
 
 namespace Game.Entities.CardGrid
 {
