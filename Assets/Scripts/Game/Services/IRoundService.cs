@@ -10,5 +10,6 @@ namespace Game.Services
         int PairsToMatch();
         int PairsMatched();
         void Match();
+        void Miss();
     }
 }
