@@ -11,5 +11,6 @@ namespace Game.Services
         int PairsMatched();
         bool RoundInProgress();
         int GetLastRound();
+        int GetRound();
     }
 }
