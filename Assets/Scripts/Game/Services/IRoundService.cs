@@ -7,5 +7,8 @@ namespace Game.Services
         void StartRound();
         void EndRound(bool victory);
         void SetRound(int round);
+        int PairsToMatch();
+        int PairsMatched();
+        void Match();
     }
 }

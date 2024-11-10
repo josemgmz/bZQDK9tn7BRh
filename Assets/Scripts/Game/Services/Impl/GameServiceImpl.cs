@@ -54,10 +54,12 @@ namespace Game.Services.Impl
             _audioService.PlayMusic(AudioData.Music.Background, true);
         }
         
-        private void OnCardFlippedEvent(OnCardFlippedEvent eventData)
+        private async void OnCardFlippedEvent(OnCardFlippedEvent eventData)
         {
             _logService.Log("Card flipped event received");
             _cardFlippedEvents.Add(eventData);
+            
+            // Check if two cards are flipped
             if (_cardFlippedEvents.Count <= 1) return;
             var firstEvent = _cardFlippedEvents[0];
             var secondEvent = _cardFlippedEvents[1];
@@ -65,11 +67,13 @@ namespace Game.Services.Impl
             _cardFlippedEvents.Remove(firstEvent);
             _cardFlippedEvents.Remove(secondEvent);
             
+            // Check if cards match
             if (firstEvent.CardShape == secondEvent.CardShape && firstEvent.CardType == secondEvent.CardType)
             {
                 firstEvent.OnSuccess();
                 secondEvent.OnSuccess();
                 _audioService.PlaySfx(AudioData.Sfx.SuccessMatching);
+                _roundService.Match();
             }
             else
             {
@@ -77,6 +81,12 @@ namespace Game.Services.Impl
                 secondEvent.OnFail();
                 _audioService.PlaySfx(AudioData.Sfx.ErrorMatching);
             }
+            
+            // Check if round is over
+            if (_roundService.PairsMatched() != _roundService.PairsToMatch()) return;
+            await Task.Delay(500);
+            _audioService.PlaySfx(AudioData.Sfx.SuccessRound);
+            _roundService.EndRound(true);
         }
 
         #endregion

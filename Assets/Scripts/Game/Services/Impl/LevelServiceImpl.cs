@@ -9,7 +9,7 @@ namespace Game.Services.Impl
     {
         #region Variables
 
-        private List<CardGridSetupRequest> _levels = new ();
+        private List<OnCardGridSetupEvent> _levels = new ();
         private Random _random = new Random((int)DateTime.Now.Ticks);
         
         #endregion
@@ -38,7 +38,7 @@ namespace Game.Services.Impl
         #region Public Methods
         
 
-        public CardGridSetupRequest GetLevel(int level)
+        public OnCardGridSetupEvent GetLevel(int level)
         {
             return level >= _levels.Count ? CreateLevel(8, 8) : _levels[level];
         }
@@ -48,7 +48,7 @@ namespace Game.Services.Impl
 
         #region Private Methods
 
-        private CardGridSetupRequest CreateLevel(int columns, int rows)
+        private OnCardGridSetupEvent CreateLevel(int columns, int rows)
         {
             var pairs = (columns * rows) / 2;
             var cards = new List<OnCardSetupEvent>();
@@ -70,7 +70,7 @@ namespace Game.Services.Impl
                 cards.Add(new OnCardSetupEvent { CardShape = cardShape, CardType = cardType });
             }
 
-            var level = new CardGridSetupRequest
+            var level = new OnCardGridSetupEvent
             {
                 Columns = columns,
                 Shuffle = true,
