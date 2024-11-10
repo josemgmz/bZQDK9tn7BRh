@@ -1,4 +1,7 @@
 ﻿using System.Collections.Generic;
+using Framework;
+using Game.Entities.UITextElement.Data;
+using VContainer;
 
 namespace Game.Services.Impl
 {
@@ -13,6 +16,8 @@ namespace Game.Services.Impl
         private int _currentScore = 0;
         private int _turns = 0;
         private int _miss = 0;
+        
+        [Inject] private IGameEventBus _gameEventBus;
 
         #endregion
 
@@ -23,6 +28,7 @@ namespace Game.Services.Impl
             _combo++;
             _turns++;
             _currentScore += MATCHING_SCORE * _combo;
+            UpdateUI();
         }
         
         public void Miss()
@@ -30,6 +36,7 @@ namespace Game.Services.Impl
             _combo = 0;
             _miss++;
             _turns++;
+            UpdateUI();
         }
         
         public void Reset()
@@ -41,6 +48,23 @@ namespace Game.Services.Impl
             _currentScore = 0;
             _turns = 0;
             _miss = 0;
+            UpdateUI(true);
+        }
+
+        #endregion
+
+        #region Private Methods
+
+        private void UpdateUI(bool resetTime = false)
+        {
+            var eventData = new OnUIManagerUpdateEvent
+            {
+                ResetTime = resetTime,
+                Combo = _combo,
+                Score = _currentScore,
+                Turns = _turns
+            };
+            _gameEventBus.RaiseEvent(eventData);
         }
 
         #endregion
