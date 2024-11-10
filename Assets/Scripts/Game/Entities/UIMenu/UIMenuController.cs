@@ -7,19 +7,40 @@ using VContainer;
 
 namespace Game.Entities.UIMenu
 {
-    public class UIMenuController :  GameController<UIMenuView>
+    /// <summary>
+    /// Controls the UI menu, handling button clicks and animations.
+    /// </summary>
+    public class UIMenuController : GameController<UIMenuView>
     {
         #region Services
 
+        /// <summary>
+        /// Service for managing storage operations.
+        /// </summary>
         [Inject] private IStorageService _storageService;
+
+        /// <summary>
+        /// Service for managing game rounds.
+        /// </summary>
         [Inject] private IRoundService _roundService;
+
+        /// <summary>
+        /// Service for managing scoring operations.
+        /// </summary>
         [Inject] private IScoringService _scoringService;
+
+        /// <summary>
+        /// Event bus for handling game events.
+        /// </summary>
         [Inject] private IGameEventBus _gameEventBus;
 
         #endregion
-        
+
         #region Lifecycle
 
+        /// <summary>
+        /// Initializes the UI menu controller.
+        /// </summary>
         private void Awake()
         {
             var model = GetModel<UIMenuModel>();
@@ -27,14 +48,20 @@ namespace Game.Entities.UIMenu
             model.ClearProgressButton.onClick.AddListener(OnClearProgressButtonClicked);
             _gameEventBus.AddListener<OnUIMenuEnableEvent>(OnUIMenuEnableEvent);
         }
-        
+
+        /// <summary>
+        /// Sets up the UI menu at the start.
+        /// </summary>
         private void Start()
         {
             var model = GetModel<UIMenuModel>();
             model.Score.text = _scoringService.GetHighestScore().ToString();
             model.LastRound.text = _roundService.GetLastRound().ToString();
         }
-        
+
+        /// <summary>
+        /// Cleans up the UI menu controller.
+        /// </summary>
         private void OnDestroy()
         {
             var model = GetModel<UIMenuModel>();
@@ -44,9 +71,13 @@ namespace Game.Entities.UIMenu
         }
 
         #endregion
-        
+
         #region Private Methods
 
+        /// <summary>
+        /// Handles the UI menu enable event.
+        /// </summary>
+        /// <param name="eventData">The event data.</param>
         private void OnUIMenuEnableEvent(OnUIMenuEnableEvent eventData)
         {
             Start();
@@ -54,24 +85,35 @@ namespace Game.Entities.UIMenu
             StartCoroutine(PanelAnimation(false));
         }
 
+        /// <summary>
+        /// Handles the play button click event.
+        /// </summary>
         private void OnPlayButtonClicked()
         {
             StartCoroutine(ContainerAnimation());
             StartCoroutine(PanelAnimation());
-            if(!_roundService.RoundInProgress()) _roundService.StartRound();
+            if (!_roundService.RoundInProgress()) _roundService.StartRound();
         }
-        
+
+        /// <summary>
+        /// Handles the clear progress button click event.
+        /// </summary>
         private void OnClearProgressButtonClicked()
         {
             _storageService.ClearData();
             _roundService.SetRound(0);
             _roundService.EndRound(false);
-            
+
             var model = GetModel<UIMenuModel>();
             model.Score.text = "0";
             model.LastRound.text = "0";
         }
 
+        /// <summary>
+        /// Animates the container.
+        /// </summary>
+        /// <param name="isOut">Whether the animation is out or in.</param>
+        /// <returns>An enumerator for the animation.</returns>
         private IEnumerator ContainerAnimation(bool isOut = true)
         {
             var model = GetModel<UIMenuModel>();
@@ -90,7 +132,12 @@ namespace Game.Entities.UIMenu
 
             content.anchoredPosition = endPosition;
         }
-        
+
+        /// <summary>
+        /// Animates the panels.
+        /// </summary>
+        /// <param name="isOut">Whether the animation is out or in.</param>
+        /// <returns>An enumerator for the animation.</returns>
         private IEnumerator PanelAnimation(bool isOut = true)
         {
             var model = GetModel<UIMenuModel>();
