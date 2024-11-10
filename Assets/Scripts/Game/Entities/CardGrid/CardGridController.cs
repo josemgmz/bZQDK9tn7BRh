@@ -19,34 +19,36 @@ namespace Game.Entities.CardGrid
 
         private void Awake()
         {
-            _eventBus.AddListener<CardGridSetupRequest>(CreateGrid);
+            _eventBus.AddListener<OnCardGridSetupEvent>(CreateGrid);
+            _eventBus.AddListener<OnCardCleanEvent>(CleanGrid);
         }
         
         private void OnDestroy()
         {
-            _eventBus.RemoveListener<CardGridSetupRequest>(CreateGrid);
+            _eventBus.RemoveListener<OnCardGridSetupEvent>(CreateGrid);
+            _eventBus.RemoveListener<OnCardCleanEvent>(CleanGrid);
         }
 
         #endregion
 
         #region Methods
 
-        private void CreateGrid(CardGridSetupRequest request)
+        private void CreateGrid(OnCardGridSetupEvent eventData)
         {
             //Get model
             var model = GetModel<CardGridModel>();
-            model.ResponsiveGridLayout.SetColumns(request.Columns);
+            model.ResponsiveGridLayout.SetColumns(eventData.Columns);
             model.ResponsiveGridLayout.SetSpacing(model.Spacing);
             
             //Create the grid.
-            request.Cards.ForEach(it =>
+            eventData.Cards.ForEach(it =>
             {
                 CreateCard(model.CardPrefab, it);
                 CreateCard(model.CardPrefab, it);
             });
             
             //Shuffle the cards
-            if (!request.Shuffle) return;
+            if (!eventData.Shuffle) return;
             var children = new List<Transform>();
             for (var i = 0; i < transform.childCount; i++)
                 children.Add(transform.GetChild(i));
@@ -63,6 +65,13 @@ namespace Game.Entities.CardGrid
             //Get the view and initialize it
             var cardView = card.GetComponent<CardView>();
             cardView.Initialize<CardModel>(it.CardShape, it.CardType, false);
+        }
+        
+        private void CleanGrid(OnCardCleanEvent eventData)
+        {
+            //Destroy
+            for (var i = 0; i < transform.childCount; i++)
+                Object.Destroy(transform.GetChild(i).gameObject);
         }
 
         #endregion

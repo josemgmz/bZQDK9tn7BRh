@@ -1,5 +1,6 @@
 ﻿
 using Framework;
+using Game.Entities.CardGrid;
 using VContainer;
 
 namespace Game.Services.Impl
@@ -9,6 +10,7 @@ namespace Game.Services.Impl
         #region Variables
 
         private int _roundNumber = 0;
+        private int _pairsMatched = 0;
         
         [Inject] private ILevelService _levelService;
         [Inject] private IGameEventBus _gameEventBus;
@@ -21,6 +23,7 @@ namespace Game.Services.Impl
         public void StartRound()
         {
             var level = _levelService.GetLevel(_roundNumber);
+            _pairsMatched = 0;
             _gameEventBus.RaiseEvent(level);
             _logService.Log($"Round {_roundNumber} started");
         }
@@ -29,13 +32,30 @@ namespace Game.Services.Impl
         {
             _logService.Log($"Round {_roundNumber} ended");
             if(victory) _roundNumber++;
+            _gameEventBus.RaiseEvent(new OnCardCleanEvent{});
             StartRound();
         }
 
         public void SetRound(int round)
         {
+            _pairsMatched = 0;
             _roundNumber = round;
             _logService.Log($"Round set to {_roundNumber}");
+        }
+        
+        public int PairsToMatch()
+        {
+            return _levelService.GetLevel(_roundNumber).Cards.Count;
+        }
+        
+        public int PairsMatched()
+        {
+            return _pairsMatched;
+        }
+        
+        public void Match()
+        {
+            _pairsMatched++;
         }
 
         #endregion

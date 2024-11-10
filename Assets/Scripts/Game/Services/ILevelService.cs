@@ -5,6 +5,6 @@ namespace Game.Services
 {
     public interface ILevelService: IStartableService, IStoppableService
     {
-        public CardGridSetupRequest GetLevel(int level);
+        public OnCardGridSetupEvent GetLevel(int level);
     }
 }
