@@ -32,11 +32,13 @@ namespace Game.Services.Impl
             _gameEventBus.RaiseEvent(new OnCardFlipEvent());
         }
 
-        public void EndRound(bool victory)
+        public async void EndRound(bool victory)
         {
+            await Task.Delay(500);
             _logService.Log($"Round {_roundNumber} ended");
             if(victory) _roundNumber++;
             _gameEventBus.RaiseEvent(new OnCardCleanEvent{});
+            await Task.Delay(1000);
             StartRound();
         }
 
