@@ -12,6 +12,7 @@ namespace Game.Services.Impl
         
         [Inject] private ILevelService _levelService;
         [Inject] private IGameEventBus _gameEventBus;
+        [Inject] private ILogService _logService;
 
         #endregion
         
@@ -21,14 +22,21 @@ namespace Game.Services.Impl
         {
             var level = _levelService.GetLevel(_roundNumber);
             _gameEventBus.RaiseEvent(level);
+            _logService.Log($"Round {_roundNumber} started");
         }
 
         public void EndRound(bool victory)
         {
+            _logService.Log($"Round {_roundNumber} ended");
             if(victory) _roundNumber++;
             StartRound();
         }
 
+        public void SetRound(int round)
+        {
+            _roundNumber = round;
+            _logService.Log($"Round set to {_roundNumber}");
+        }
 
         #endregion
 

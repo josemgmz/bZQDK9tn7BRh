@@ -2,6 +2,7 @@
 using Framework;
 using Game.Helper;
 using Game.Services;
+using Game.Services.Data;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using VContainer;
@@ -24,7 +25,6 @@ namespace Game.Entities.Card
             var model = GetModel<CardModel>();
             if (model.IsFlipped) return;
             transform.rotation *= Quaternion.Euler(0, -180, 0);
-            model.Image.sprite = model.BackSprite;
         }
 
         #endregion
@@ -34,17 +34,28 @@ namespace Game.Entities.Card
         private void OnPointerUp(PointerEventData other)
         {
             var model = GetModel<CardModel>();
-            if(model.FlipCardCoroutine != null) return;
-            model.FlipCardCoroutine = StartCoroutine(FlipCard());
+            if (model.IsFlipped) return;
+            FlipCard();
         }
 
         #endregion
 
-        #region Methods
+        #region Public Methods
 
-        private IEnumerator FlipCard()
+        public void FlipCard()
         {
-            _audioService.PlaySfx(CardModel.CARD_FLIP_SFX);
+            var model = GetModel<CardModel>();
+            if(model.FlipCardCoroutine != null) return;
+            model.FlipCardCoroutine = StartCoroutine(_FlipCard());
+        }
+
+        #endregion
+
+        #region Private Methods
+
+        private IEnumerator _FlipCard()
+        {
+            _audioService.PlaySfx(AudioData.Sfx.CardFlip);
             var model = GetModel<CardModel>();
             var duration = model.RotationTime;
             var startRotation = transform.rotation;
@@ -55,7 +66,7 @@ namespace Game.Entities.Card
 
             // Set rotation to exactly 90 degrees and change sprite
             transform.rotation = midRotation;
-            model.Image.sprite = model.Image.sprite == model.BackSprite ? model.FrontSprite : model.BackSprite;
+            GetController<CardImageController>().FlipCard();
 
             yield return transform.RotateTo(midRotation, endRotation, duration / 2);
 
@@ -63,6 +74,9 @@ namespace Game.Entities.Card
             transform.rotation = endRotation;
             model.IsFlipped = !model.IsFlipped;
             model.FlipCardCoroutine = null;
+            
+            //Send event to check if the card is a match
+            if(model.IsFlipped)GetController<CardEventController>().SendOnCardFlippedEvent();
         }
 
         #endregion

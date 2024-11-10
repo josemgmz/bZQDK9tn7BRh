@@ -20,7 +20,7 @@ namespace Game.System
             builder.Register<IRoundService, RoundServiceImpl>(Lifetime.Singleton);
             
             //Register Game Service
-            builder.Register<IStartableService, IGameService, GameServiceImpl>(Lifetime.Singleton);
+            builder.Register<IStartableService, IStoppableService, IGameService, GameServiceImpl>(Lifetime.Singleton);
             
             //Register EntryPoint
             builder.RegisterEntryPoint<EntryPointSystem>();

@@ -54,7 +54,7 @@ namespace Game.Entities.CardGrid
             children.ForEach(it => it.SetSiblingIndex(0));
         }
 
-        private void CreateCard(GameObject cardPrefab, CardSetupRequest it)
+        private void CreateCard(GameObject cardPrefab, OnCardSetupEvent it)
         {
             //Instantiate the card
             var card = Object.Instantiate(cardPrefab, transform);

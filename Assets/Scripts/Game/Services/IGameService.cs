@@ -3,7 +3,7 @@ using Game.Services.Lifetime;
 
 namespace Game.Services
 {
-    public interface IGameService : IStartableService
+    public interface IGameService : IStartableService, IStoppableService
     {
     }
 }

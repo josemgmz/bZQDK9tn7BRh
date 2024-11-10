@@ -5,7 +5,7 @@ namespace Game.Entities.CardGrid
 {
     public class CardGridSetupRequest
     {
-        public List<CardSetupRequest> Cards { get; set; }
+        public List<OnCardSetupEvent> Cards { get; set; }
         public int Columns { get; set; }
         public bool Shuffle { get; set; }
     }

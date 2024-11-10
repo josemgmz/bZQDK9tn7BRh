@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Framework;
+using Game.Services.Data;
 using UnityEngine;
 using UnityEngine.Audio;
 using VContainer;
@@ -48,6 +49,21 @@ namespace Game.Services.Impl
         #endregion
 
         #region Play Methods
+
+        public void PlayMusic(AudioData.Music music, bool loop = false)
+        {
+            PlayMusic(music.GetString(), loop);
+        }
+
+        public void PlaySfx(AudioData.Sfx sfx, bool loop = false)
+        {
+            PlaySfx(sfx.GetString(), loop);
+        }
+
+        public void PlayVoice(AudioData.Voice voice, bool loop = false)
+        {
+            PlayVoice(voice.GetString(), loop);
+        }
 
         public void PlayMusic(AudioClip music, bool loop)
         {
