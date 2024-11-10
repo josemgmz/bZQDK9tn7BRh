@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using Framework;
 using Game.Entities.Card.Data;
-using Game.Entities.CardGrid;
 using Game.Entities.CardGrid.Data;
 using VContainer;
 
@@ -19,6 +18,16 @@ namespace Game.Services.Impl
         [Inject] private IGameEventBus _gameEventBus;
         [Inject] private IScoringService _scoringService;
         [Inject] private ILogService _logService;
+        [Inject] private IStorageService _storageService;
+
+        #endregion
+
+        #region Lifecycle
+        
+        public void Start()
+        {
+            _roundNumber = _storageService.GetLastRound();
+        }
 
         #endregion
         
@@ -38,9 +47,9 @@ namespace Game.Services.Impl
         {
             await Task.Delay(500);
             _logService.Log($"Round {_roundNumber} ended");
+            _scoringService.Reset(_roundNumber);
             if(victory) _roundNumber++;
             _gameEventBus.RaiseEvent(new OnCardCleanEvent{});
-            _scoringService.Reset();
             await Task.Delay(1000);
             StartRound();
         }
@@ -74,7 +83,5 @@ namespace Game.Services.Impl
         }
 
         #endregion
-
-       
     }
 }
