@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Framework;
 using Game.Services.Data;
 using VContainer;
+using NotImplementedException = System.NotImplementedException;
 
 namespace Game.Services.Impl
 {
@@ -93,6 +94,11 @@ namespace Game.Services.Impl
         {
             var scoringData = _storageService.GetData();
             return scoringData.Count > 0 ? scoringData.Max(it => it.Round) + 1 : 0;
+        }
+
+        public int GetRound()
+        {
+            return _roundNumber;
         }
 
         #endregion
