@@ -81,6 +81,7 @@ namespace Game.Services.Impl
                 firstEvent.OnFail();
                 secondEvent.OnFail();
                 _audioService.PlaySfx(AudioData.Sfx.ErrorMatching);
+                _roundService.Miss();
             }
             
             // Check if round is over
