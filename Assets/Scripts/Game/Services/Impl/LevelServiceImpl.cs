@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Game.Entities.Card;
 using Game.Entities.Card.Data;
 using Game.Entities.CardGrid;
+using Game.Entities.CardGrid.Data;
 
 namespace Game.Services.Impl
 {

@@ -2,6 +2,7 @@
 using Framework;
 using Game.Entities.Card;
 using Game.Entities.Card.Data;
+using Game.Entities.CardGrid.Data;
 using Game.Helper;
 using UnityEngine;
 using VContainer;
