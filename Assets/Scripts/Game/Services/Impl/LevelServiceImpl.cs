@@ -20,7 +20,7 @@ namespace Game.Services.Impl
         {
             var levelConfigs = new (int columns, int rows)[]
             {
-                (2, 2), (2, 3), (3, 4), (4, 4), (4, 5), (5, 6), (6, 6), (6, 7), (7, 8), (8, 8)
+                (2, 2), (3, 2), (4, 2), (5, 2), (6, 2), (7, 2), (8, 3), (9, 3), (6, 5),(10, 4)
             };
 
             foreach (var (columns, rows) in levelConfigs)
@@ -40,7 +40,7 @@ namespace Game.Services.Impl
 
         public OnCardGridSetupEvent GetLevel(int level)
         {
-            return level >= _levels.Count ? CreateLevel(8, 8) : _levels[level];
+            return level >= _levels.Count ? CreateLevel(10, 4) : _levels[level];
         }
         
 
