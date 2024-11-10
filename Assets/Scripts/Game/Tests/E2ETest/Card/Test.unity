@@ -762,6 +762,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2533731633069646463, guid: ae919debf38b06444b93b2bc70af31e1,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533731633069646463, guid: ae919debf38b06444b93b2bc70af31e1,
+        type: 3}
+      propertyPath: _model.cardType
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533731633069646463, guid: ae919debf38b06444b93b2bc70af31e1,
+        type: 3}
       propertyPath: _model.isFlipped
       value: 0
       objectReference: {fileID: 0}
