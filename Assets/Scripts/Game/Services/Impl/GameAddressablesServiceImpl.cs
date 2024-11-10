@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Framework;
 using Game.Entities.Card;
+using Game.Entities.Card.Data;
 using UnityEngine;
 
 namespace Game.Services.Impl

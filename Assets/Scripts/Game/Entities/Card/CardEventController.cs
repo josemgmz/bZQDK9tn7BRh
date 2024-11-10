@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Framework;
+using Game.Entities.Card.Data;
 using VContainer;
 
 namespace Game.Entities.Card

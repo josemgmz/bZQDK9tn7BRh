@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Game.Entities.Card
+namespace Game.Entities.Card.Data
 {
     public enum CardShape
     {

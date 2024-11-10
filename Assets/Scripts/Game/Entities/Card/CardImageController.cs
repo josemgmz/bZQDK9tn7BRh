@@ -1,4 +1,5 @@
 ﻿using Framework;
+using Game.Entities.Card.Data;
 using Game.Services;
 using UnityEngine;
 using VContainer;

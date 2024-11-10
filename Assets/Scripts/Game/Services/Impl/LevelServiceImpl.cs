@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Game.Entities.Card;
+using Game.Entities.Card.Data;
 using Game.Entities.CardGrid;
 
 namespace Game.Services.Impl

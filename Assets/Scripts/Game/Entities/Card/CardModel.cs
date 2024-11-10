@@ -1,5 +1,6 @@
 ﻿using System;
 using Framework;
+using Game.Entities.Card.Data;
 using UnityEngine;
 using UnityEngine.UI;
 
