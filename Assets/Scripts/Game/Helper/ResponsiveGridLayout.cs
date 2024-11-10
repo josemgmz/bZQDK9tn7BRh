@@ -3,35 +3,59 @@ using UnityEngine.UI;
 
 namespace Game.Helper
 {
+    /// <summary>
+    /// A custom grid layout group that adjusts its layout based on the size of the container and the reference sprite.
+    /// </summary>
     [ExecuteInEditMode]
     public class ResponsiveGridLayout : GridLayoutGroup
     {
         #region Variables
 
+        /// <summary>
+        /// The reference sprite used to determine the size of the grid cells.
+        /// </summary>
         public Sprite m_ReferenceSprite;
+
+        /// <summary>
+        /// The spacing between elements in the grid.
+        /// </summary>
         public Vector2 m_ElementsSpacing;
 
         #endregion
 
         #region Public Methods
 
+        /// <summary>
+        /// Sets the number of columns in the grid.
+        /// </summary>
+        /// <param name="columns">The number of columns.</param>
         public void SetColumns(int columns)
         {
             m_Constraint = Constraint.FixedColumnCount;
             m_ConstraintCount = columns;
         }
-        
+
+        /// <summary>
+        /// Sets the spacing between elements in the grid.
+        /// </summary>
+        /// <param name="spacing">The spacing between elements.</param>
         public void SetSpacing(Vector2 spacing)
         {
             m_ElementsSpacing = spacing;
         }
-        
+
+        /// <summary>
+        /// Calculates the horizontal layout input for the grid.
+        /// </summary>
         public override void CalculateLayoutInputHorizontal()
         {
             base.CalculateLayoutInputHorizontal();
             CalculateResponsiveLayout();
         }
-        
+
+        /// <summary>
+        /// Calculates the vertical layout input for the grid.
+        /// </summary>
         public override void CalculateLayoutInputVertical()
         {
             base.CalculateLayoutInputVertical();
@@ -42,9 +66,12 @@ namespace Game.Helper
 
         #region Private Methods
 
+        /// <summary>
+        /// Calculates the responsive layout for the grid based on the container size and reference sprite.
+        /// </summary>
         private void CalculateResponsiveLayout()
         {
-            if(rectChildren.Count == 0) return;
+            if (rectChildren.Count == 0) return;
 
             var minColumns = 0;
             var preferredColumns = 0;
