@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Game.Services.Data;
-using Unity.Plastic.Newtonsoft.Json;
+using Newtonsoft.Json;
 using UnityEngine;
 
 namespace Game.Services.Impl
