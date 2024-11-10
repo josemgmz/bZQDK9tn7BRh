@@ -11,5 +11,6 @@ namespace Game.Services
         int PairsMatched();
         void Match();
         void Miss();
+        bool RoundInProgress();
     }
 }

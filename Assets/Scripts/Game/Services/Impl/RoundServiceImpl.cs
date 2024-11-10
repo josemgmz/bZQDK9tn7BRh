@@ -13,6 +13,7 @@ namespace Game.Services.Impl
 
         private int _roundNumber = 0;
         private int _pairsMatched = 0;
+        private bool _roundInProgress = false;
         
         [Inject] private ILevelService _levelService;
         [Inject] private IGameEventBus _gameEventBus;
@@ -35,6 +36,7 @@ namespace Game.Services.Impl
 
         public async void StartRound()
         {
+            _roundInProgress = true;
             var level = _levelService.GetLevel(_roundNumber);
             _pairsMatched = 0;
             _gameEventBus.RaiseEvent(level);
@@ -80,6 +82,11 @@ namespace Game.Services.Impl
         public void Miss()
         {
             _scoringService.Miss();
+        }
+        
+        public bool RoundInProgress()
+        {
+            return _roundInProgress;
         }
 
         #endregion

@@ -49,6 +49,11 @@ namespace Game.Services.Impl
         {
             return _scoringData.Count > 0 ? _scoringData.Max(it => it.Round) + 1 : 0;
         }
+        
+        public int GetHighestScore()
+        {
+            return _scoringData.Count > 0 ? _scoringData.Max(it => it.Score) : 0;
+        }
 
         #endregion
 

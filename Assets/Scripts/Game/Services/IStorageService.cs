@@ -7,5 +7,6 @@ namespace Game.Services
         void AddData(int score, int turns, int combo, int round);
         void ClearData();
         int GetLastRound();
+        int GetHighestScore();
     }
 }
