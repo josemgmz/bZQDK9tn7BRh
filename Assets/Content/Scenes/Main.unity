@@ -3053,6 +3053,7 @@ MonoBehaviour:
     _turns: {fileID: 2037823988}
     _combo: {fileID: 551101855}
     _score: {fileID: 1684595625}
+    _settingsButton: {fileID: 949395960}
 --- !u!1001 &1479992718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3278,7 +3279,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -479.99994, y: 0}
+  m_AnchoredPosition: {x: -480, y: 0}
   m_SizeDelta: {x: -960.0001, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1652188052
@@ -3329,6 +3330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1657264725}
   - component: {fileID: 1657264726}
+  - component: {fileID: 1657264727}
   m_Layer: 0
   m_Name: UIMenu
   m_TagString: Untagged
@@ -3367,6 +3369,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657264724}
   m_CullTransparentMesh: 1
+--- !u!114 &1657264727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657264724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3065261b9a7d4fe0a8cec6c415ed3286, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _model:
+    _playButton: {fileID: 88930964}
+    _clearProgressButton: {fileID: 811384321}
+    _score: {fileID: 737269592}
+    _lastRound: {fileID: 134807312}
+    _content: {fileID: 1752385428}
+    _leftPanel: {fileID: 1652188051}
+    _rightPanel: {fileID: 1469401259}
 --- !u!114 &1684595625 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3626573694372286175, guid: 3969bbb6dde53bf49aa3f7cda4af9d6d,

@@ -1,4 +1,5 @@
 ﻿using Framework;
+using Game.Entities.UIMenu.Data;
 using Game.Entities.UITextElement;
 using Game.Entities.UITextElement.Data;
 using UnityEngine;
@@ -24,6 +25,7 @@ namespace Game.Entities.UIManager
             model.TurnsController = model.Turns.GetController<UITextElementController>();
             model.ComboController = model.Combo.GetController<UITextElementController>();
             model.ScoreController = model.Score.GetController<UITextElementController>();
+            model.SettingsButton.onClick.AddListener(RaiseUIMenuEnableEvent);
             model.StartTime = Time.time;
         }
 
@@ -37,11 +39,18 @@ namespace Game.Entities.UIManager
         private void OnDestroy()
         {
             _gameEventBus.RemoveListener<OnUIManagerUpdateEvent>(OnUIManagerUpdateEvent);
+            var model = GetModel<UIManagerModel>();
+            model.SettingsButton.onClick.RemoveListener(RaiseUIMenuEnableEvent);
         }
 
         #endregion
 
         #region Private Methods
+
+        private void RaiseUIMenuEnableEvent()
+        {
+            _gameEventBus.RaiseEvent(new OnUIMenuEnableEvent{});
+        }
 
         private void OnUIManagerUpdateEvent(OnUIManagerUpdateEvent eventData)
         {

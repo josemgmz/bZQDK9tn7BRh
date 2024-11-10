@@ -23,13 +23,10 @@ namespace Game.Services.Impl
 
         #region Lifecycle
         
-        public async void Start()
+        public void Start()
         {
             SetupMusic();
             _gameEventBus.AddListener<OnCardFlippedEvent>(OnCardFlippedEvent);
-            
-            await Task.Delay(250);
-            _roundService.StartRound();
             _logService.Log("GameService initialized");
         }
 

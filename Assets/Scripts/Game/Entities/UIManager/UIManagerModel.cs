@@ -2,6 +2,7 @@
 using Framework;
 using Game.Entities.UITextElement;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Game.Entities.UIManager
 {
@@ -14,6 +15,7 @@ namespace Game.Entities.UIManager
         [SerializeField] private UITextElementView _turns;
         [SerializeField] private UITextElementView _combo;
         [SerializeField] private UITextElementView _score;
+        [SerializeField] private Button _settingsButton;
         
         private UITextElementController _timeController;
         private UITextElementController _turnsController;
@@ -24,6 +26,8 @@ namespace Game.Entities.UIManager
         #endregion
         
         #region Properties
+        
+        public Button SettingsButton => _settingsButton;
         
         public float StartTime
         {
