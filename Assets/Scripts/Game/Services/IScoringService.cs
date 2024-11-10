@@ -5,6 +5,6 @@ namespace Game.Services
     {
         void Match();
         void Miss();
-        void Reset();
+        void Reset(int currentRound);
     }
 }

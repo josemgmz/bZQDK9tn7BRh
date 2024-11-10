@@ -2,7 +2,7 @@
 
 namespace Game.Services
 {
-    public interface IRoundService
+    public interface IRoundService: IStartableService
     {
         void StartRound();
         void EndRound(bool victory);
