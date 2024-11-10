@@ -19,6 +19,7 @@ namespace Game.Entities.Card
         
         [Header("Configurations")]
         [Range(0f, 1f)] [SerializeField] private float rotationTime = 0.25f;
+        [Range(0f, 1f)] [SerializeField] private float scaleTime = 0.25f;
         [SerializeField] private CardType cardType;
         [SerializeField] private CardShape cardShape;
         [SerializeField] private bool isFlipped;
@@ -29,7 +30,7 @@ namespace Game.Entities.Card
 
         #region Properties
         
-        
+        public float ScaleTime => scaleTime;
         public CardType CardType => cardType;
         public CardShape CardShape => cardShape;
         public Image Image => image;

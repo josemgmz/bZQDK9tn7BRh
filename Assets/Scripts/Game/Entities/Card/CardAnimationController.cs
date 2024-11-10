@@ -48,6 +48,11 @@ namespace Game.Entities.Card
             if(model.FlipCardCoroutine != null) return;
             model.FlipCardCoroutine = StartCoroutine(_FlipCard(playSound));
         }
+        
+        public void MatchCard()
+        {
+            StartCoroutine(_MatchCard());
+        }
 
         #endregion
 
@@ -77,6 +82,33 @@ namespace Game.Entities.Card
             
             //Send event to check if the card is a match
             if(model.IsFlipped)GetController<CardEventController>().SendOnCardFlippedEvent();
+        }
+
+        private IEnumerator _MatchCard()
+        {
+            var model = GetModel<CardModel>();
+            var duration = model.ScaleTime;
+            var startScale = transform.localScale;
+            var midScale = startScale * 1.1f; // 10% más grande
+            var endScale = Vector3.zero;
+
+            float elapsedTime = 0;
+            while (elapsedTime < duration / 4)
+            {
+                transform.localScale = Vector3.Lerp(startScale, midScale, elapsedTime / (duration / 4));
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+
+            elapsedTime = 0;
+            while (elapsedTime < (3 * duration) / 4)
+            {
+                transform.localScale = Vector3.Lerp(midScale, endScale, elapsedTime / ((3 * duration) / 4));
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+
+            transform.localScale = endScale;
         }
 
         #endregion
