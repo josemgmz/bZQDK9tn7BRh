@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System.Linq;
 using Framework;
 using Game.Entities.UITextElement.Data;
+using Game.Services.Data;
 using VContainer;
 
 namespace Game.Services.Impl
@@ -21,23 +22,23 @@ namespace Game.Services.Impl
 
         #endregion
 
-        #region Public Methods
+        #region Lifecycle
 
-        public void Match()
+        public void Start()
         {
-            _combo++;
-            _turns++;
-            _currentScore += MATCHING_SCORE * _combo;
-            UpdateUI();
+            _gameEventBus.AddListener<OnRoundCardMatchEvent>(Match);
+            _gameEventBus.AddListener<OnRoundCardMissMatchEvent>(Miss);
         }
-        
-        public void Miss()
+
+        public void Stop()
         {
-            _combo = 0;
-            _miss++;
-            _turns++;
-            UpdateUI();
+            _gameEventBus.RemoveListener<OnRoundCardMatchEvent>(Match);
+            _gameEventBus.RemoveListener<OnRoundCardMissMatchEvent>(Miss);
         }
+
+        #endregion
+
+        #region Public Methods
         
         public void Reset(int currentRound)
         {
@@ -49,6 +50,12 @@ namespace Game.Services.Impl
             _turns = 0;
             _miss = 0;
             UpdateUI(true);
+        }
+        
+        public int GetHighestScore()
+        {
+            var scoringData = _storageService.GetData();
+            return scoringData.Count > 0 ? scoringData.Max(it => it.Score) : 0;
         }
 
         #endregion
@@ -65,6 +72,26 @@ namespace Game.Services.Impl
                 Turns = _turns
             };
             _gameEventBus.RaiseEvent(eventData);
+        }
+
+        #endregion
+
+        #region Private Methods
+        
+        private void Match()
+        {
+            _combo++;
+            _turns++;
+            _currentScore += MATCHING_SCORE * _combo;
+            UpdateUI();
+        }
+        
+        private void Miss()
+        {
+            _combo = 0;
+            _miss++;
+            _turns++;
+            UpdateUI();
         }
 
         #endregion

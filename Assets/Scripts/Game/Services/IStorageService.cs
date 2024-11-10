@@ -1,4 +1,6 @@
-﻿using Game.Services.Lifetime;
+﻿using System.Collections.Generic;
+using Game.Services.Data;
+using Game.Services.Lifetime;
 
 namespace Game.Services
 {
@@ -6,7 +8,6 @@ namespace Game.Services
     {
         void AddData(int score, int turns, int combo, int round);
         void ClearData();
-        int GetLastRound();
-        int GetHighestScore();
+        List<ScoringData> GetData();
     }
 }

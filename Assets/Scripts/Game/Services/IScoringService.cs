@@ -1,10 +1,11 @@
 ﻿
+using Game.Services.Lifetime;
+
 namespace Game.Services
 {
-    public interface IScoringService
+    public interface IScoringService : IStartableService, IStoppableService
     {
-        void Match();
-        void Miss();
         void Reset(int currentRound);
+        int GetHighestScore();
     }
 }

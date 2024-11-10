@@ -7,4 +7,6 @@
         public int lastRound { get; set; }
         public int currentRound { get; set; }
     }
+    public class OnRoundCardMatchEvent {}
+    public class OnRoundCardMissMatchEvent {}
 }

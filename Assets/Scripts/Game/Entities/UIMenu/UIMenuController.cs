@@ -13,6 +13,7 @@ namespace Game.Entities.UIMenu
 
         [Inject] private IStorageService _storageService;
         [Inject] private IRoundService _roundService;
+        [Inject] private IScoringService _scoringService;
         [Inject] private IGameEventBus _gameEventBus;
 
         #endregion
@@ -30,9 +31,8 @@ namespace Game.Entities.UIMenu
         private void Start()
         {
             var model = GetModel<UIMenuModel>();
-            model.Score.text = _storageService.GetHighestScore().ToString();
-            model.LastRound.text = _storageService.GetLastRound().ToString();
-            
+            model.Score.text = _scoringService.GetHighestScore().ToString();
+            model.LastRound.text = _roundService.GetLastRound().ToString();
         }
         
         private void OnDestroy()
