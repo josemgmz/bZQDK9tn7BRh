@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using Framework;
 using Game.Services.Data;
 using VContainer;
-using NotImplementedException = System.NotImplementedException;
 
 namespace Game.Services.Impl
 {
