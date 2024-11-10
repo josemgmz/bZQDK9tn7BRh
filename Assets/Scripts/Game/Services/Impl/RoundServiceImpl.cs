@@ -1,4 +1,5 @@
 ﻿
+using System.Linq;
 using System.Threading.Tasks;
 using Framework;
 using Game.Services.Data;
@@ -26,7 +27,13 @@ namespace Game.Services.Impl
         
         public void Start()
         {
-            _roundNumber = _storageService.GetLastRound();
+            _roundNumber = GetLastRound();
+            _gameEventBus.AddListener<OnRoundCardMatchEvent>(Match);
+        }
+
+        public void Stop()
+        {
+            _gameEventBus.RemoveListener<OnRoundCardMatchEvent>(Match);
         }
 
         #endregion
@@ -77,20 +84,24 @@ namespace Game.Services.Impl
             return _pairsMatched;
         }
         
-        public void Match()
-        {
-            _pairsMatched++;
-            _scoringService.Match();
-        }
-        
-        public void Miss()
-        {
-            _scoringService.Miss();
-        }
-        
         public bool RoundInProgress()
         {
             return _roundInProgress;
+        }
+        
+        public int GetLastRound()
+        {
+            var scoringData = _storageService.GetData();
+            return scoringData.Count > 0 ? scoringData.Max(it => it.Round) + 1 : 0;
+        }
+
+        #endregion
+
+        #region Private Methods
+        
+        private void Match()
+        {
+            _pairsMatched++;
         }
 
         #endregion

@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using Game.Services.Data;
 using Unity.Plastic.Newtonsoft.Json;
 using UnityEngine;
@@ -45,14 +44,9 @@ namespace Game.Services.Impl
             Save();
         }
         
-        public int GetLastRound()
+        public List<ScoringData> GetData()
         {
-            return _scoringData.Count > 0 ? _scoringData.Max(it => it.Round) + 1 : 0;
-        }
-        
-        public int GetHighestScore()
-        {
-            return _scoringData.Count > 0 ? _scoringData.Max(it => it.Score) : 0;
+            return _scoringData;
         }
 
         #endregion

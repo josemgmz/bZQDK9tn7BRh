@@ -2,15 +2,14 @@
 
 namespace Game.Services
 {
-    public interface IRoundService: IStartableService
+    public interface IRoundService: IStartableService, IStoppableService
     {
         void StartRound();
         void EndRound(bool victory);
         void SetRound(int round);
         int PairsToMatch();
         int PairsMatched();
-        void Match();
-        void Miss();
         bool RoundInProgress();
+        int GetLastRound();
     }
 }

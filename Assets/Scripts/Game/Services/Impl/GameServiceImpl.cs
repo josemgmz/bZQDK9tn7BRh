@@ -71,14 +71,14 @@ namespace Game.Services.Impl
                 firstEvent.OnSuccess();
                 secondEvent.OnSuccess();
                 _audioService.PlaySfx(AudioData.Sfx.SuccessMatching);
-                _roundService.Match();
+                _gameEventBus.RaiseEvent(new OnRoundCardMatchEvent());
             }
             else
             {
                 firstEvent.OnFail();
                 secondEvent.OnFail();
                 _audioService.PlaySfx(AudioData.Sfx.ErrorMatching);
-                _roundService.Miss();
+                _gameEventBus.RaiseEvent(new OnRoundCardMissMatchEvent());
             }
             
             // Check if round is over
