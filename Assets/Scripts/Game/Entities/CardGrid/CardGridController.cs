@@ -64,7 +64,7 @@ namespace Game.Entities.CardGrid
                 
             //Get the view and initialize it
             var cardView = card.GetComponent<CardView>();
-            cardView.Initialize<CardModel>(it.CardShape, it.CardType, false);
+            cardView.Initialize<CardModel>(it.CardShape, it.CardType, true);
         }
         
         private void CleanGrid(OnCardCleanEvent eventData)

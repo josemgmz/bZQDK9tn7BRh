@@ -96,4 +96,4 @@ MonoBehaviour:
     rotationTime: 0.2
     cardType: 0
     cardShape: 0
-    isFlipped: 0
+    isFlipped: 1
