@@ -1,4 +1,5 @@
 ﻿using Game.Entities.CardGrid;
+using Game.Entities.CardGrid.Data;
 using Game.Services.Lifetime;
 
 namespace Game.Services

@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Framework;
 using Game.Entities.Card.Data;
 using Game.Entities.CardGrid;
+using Game.Entities.CardGrid.Data;
 using VContainer;
 
 namespace Game.Services.Impl
