@@ -35,6 +35,7 @@ namespace Game.Services.Impl
                 Combo = combo,
                 Round = round
             });
+            if(score == 0 && turns == 0 && combo == 0 && round == 0) return;
             Save();
         }
         
