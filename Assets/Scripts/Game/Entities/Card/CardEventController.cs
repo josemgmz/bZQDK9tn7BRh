@@ -51,9 +51,10 @@ namespace Game.Entities.Card
             GetController<CardAnimationController>().FlipCard();
         }
         
-        private void OnSuccess()
+        private async void OnSuccess()
         {
-            
+            await Task.Delay(250);
+            GetController<CardAnimationController>().MatchCard();
         }
 
         private void OnCardFlipEvent()
