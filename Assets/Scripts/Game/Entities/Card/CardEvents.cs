@@ -13,4 +13,6 @@ namespace Game.Entities.Card
         public UnityAction OnSuccess { get; set; }
         public UnityAction OnFail { get; set; }
     }
+    
+    public class OnCardFlipEvent {}
 }

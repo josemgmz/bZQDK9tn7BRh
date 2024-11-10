@@ -1,5 +1,7 @@
 ﻿
+using System.Threading.Tasks;
 using Framework;
+using Game.Entities.Card;
 using Game.Entities.CardGrid;
 using VContainer;
 
@@ -20,12 +22,14 @@ namespace Game.Services.Impl
         
         #region Public Methods
 
-        public void StartRound()
+        public async void StartRound()
         {
             var level = _levelService.GetLevel(_roundNumber);
             _pairsMatched = 0;
             _gameEventBus.RaiseEvent(level);
             _logService.Log($"Round {_roundNumber} started");
+            await Task.Delay(2500);
+            _gameEventBus.RaiseEvent(new OnCardFlipEvent());
         }
 
         public void EndRound(bool victory)

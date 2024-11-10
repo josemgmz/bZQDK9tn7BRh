@@ -11,6 +11,20 @@ namespace Game.Entities.Card
         [Inject] private IGameEventBus _gameEventBus;
 
         #endregion
+
+        #region Lifecycle
+
+        private void Awake()
+        {
+            _gameEventBus.AddListener<OnCardFlipEvent>(OnCardFlipEvent);
+        }
+
+        public void OnDestroy()
+        {
+            _gameEventBus.RemoveListener<OnCardFlipEvent>(OnCardFlipEvent);
+        }
+
+        #endregion
         
         #region Public Methods
 
@@ -40,6 +54,11 @@ namespace Game.Entities.Card
         private void OnSuccess()
         {
             
+        }
+
+        private void OnCardFlipEvent()
+        {
+            GetController<CardAnimationController>().FlipCard(false);
         }
 
         #endregion

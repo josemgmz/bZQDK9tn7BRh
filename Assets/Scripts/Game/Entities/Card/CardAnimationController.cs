@@ -42,20 +42,20 @@ namespace Game.Entities.Card
 
         #region Public Methods
 
-        public void FlipCard()
+        public void FlipCard(bool playSound = true)
         {
             var model = GetModel<CardModel>();
             if(model.FlipCardCoroutine != null) return;
-            model.FlipCardCoroutine = StartCoroutine(_FlipCard());
+            model.FlipCardCoroutine = StartCoroutine(_FlipCard(playSound));
         }
 
         #endregion
 
         #region Private Methods
 
-        private IEnumerator _FlipCard()
+        private IEnumerator _FlipCard(bool playSound)
         {
-            _audioService.PlaySfx(AudioData.Sfx.CardFlip);
+            if(playSound) _audioService.PlaySfx(AudioData.Sfx.CardFlip);
             var model = GetModel<CardModel>();
             var duration = model.RotationTime;
             var startRotation = transform.rotation;
