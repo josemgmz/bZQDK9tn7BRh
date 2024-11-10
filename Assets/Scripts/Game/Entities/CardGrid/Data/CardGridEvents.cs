@@ -9,6 +9,4 @@ namespace Game.Entities.CardGrid.Data
         public int Columns { get; set; }
         public bool Shuffle { get; set; }
     }
-    
-    public class OnCardCleanEvent {}
 }

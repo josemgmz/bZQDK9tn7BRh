@@ -1,8 +1,7 @@
 ﻿
 using System.Threading.Tasks;
 using Framework;
-using Game.Entities.Card.Data;
-using Game.Entities.CardGrid.Data;
+using Game.Services.Data;
 using VContainer;
 
 namespace Game.Services.Impl
@@ -42,7 +41,7 @@ namespace Game.Services.Impl
             _gameEventBus.RaiseEvent(level);
             _logService.Log($"Round {_roundNumber} started");
             await Task.Delay(2500);
-            _gameEventBus.RaiseEvent(new OnCardFlipEvent());
+            _gameEventBus.RaiseEvent(new OnRoundStartEvent());
         }
 
         public async void EndRound(bool victory)
@@ -50,8 +49,13 @@ namespace Game.Services.Impl
             await Task.Delay(500);
             _logService.Log($"Round {_roundNumber} ended");
             _scoringService.Reset(_roundNumber);
+            var eventData = new OnRoundEndEvent
+            {
+                lastRound = _roundNumber
+            };
             if(victory) _roundNumber++;
-            _gameEventBus.RaiseEvent(new OnCardCleanEvent{});
+            eventData.currentRound = _roundNumber;
+            _gameEventBus.RaiseEvent(eventData);
             await Task.Delay(1000);
             StartRound();
         }

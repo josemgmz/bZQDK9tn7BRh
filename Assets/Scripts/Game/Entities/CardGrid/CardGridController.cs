@@ -4,6 +4,7 @@ using Game.Entities.Card;
 using Game.Entities.Card.Data;
 using Game.Entities.CardGrid.Data;
 using Game.Helper;
+using Game.Services.Data;
 using UnityEngine;
 using VContainer;
 
@@ -22,13 +23,13 @@ namespace Game.Entities.CardGrid
         private void Awake()
         {
             _eventBus.AddListener<OnCardGridSetupEvent>(CreateGrid);
-            _eventBus.AddListener<OnCardCleanEvent>(CleanGrid);
+            _eventBus.AddListener<OnRoundEndEvent>(CleanGrid);
         }
         
         private void OnDestroy()
         {
             _eventBus.RemoveListener<OnCardGridSetupEvent>(CreateGrid);
-            _eventBus.RemoveListener<OnCardCleanEvent>(CleanGrid);
+            _eventBus.RemoveListener<OnRoundEndEvent>(CleanGrid);
         }
 
         #endregion
@@ -69,7 +70,7 @@ namespace Game.Entities.CardGrid
             cardView.Initialize<CardModel>(it.CardShape, it.CardType, true);
         }
         
-        private void CleanGrid(OnCardCleanEvent eventData)
+        private void CleanGrid(OnRoundEndEvent eventData)
         {
             //Destroy
             for (var i = 0; i < transform.childCount; i++)
