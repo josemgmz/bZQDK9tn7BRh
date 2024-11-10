@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Framework;
 using Game.Entities.Card.Data;
+using Game.Services.Data;
 using VContainer;
 
 namespace Game.Entities.Card
@@ -17,12 +18,12 @@ namespace Game.Entities.Card
 
         private void Awake()
         {
-            _gameEventBus.AddListener<OnCardFlipEvent>(OnCardFlipEvent);
+            _gameEventBus.AddListener<OnRoundStartEvent>(OnCardFlipEvent);
         }
 
         public void OnDestroy()
         {
-            _gameEventBus.RemoveListener<OnCardFlipEvent>(OnCardFlipEvent);
+            _gameEventBus.RemoveListener<OnRoundStartEvent>(OnCardFlipEvent);
         }
 
         #endregion
