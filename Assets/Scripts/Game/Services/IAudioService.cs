@@ -1,4 +1,5 @@
-﻿using Game.Services.Lifetime;
+﻿using Game.Services.Data;
+using Game.Services.Lifetime;
 using UnityEngine;
 
 namespace Game.Services
@@ -6,7 +7,9 @@ namespace Game.Services
     public interface IAudioService : IStartableService, IStoppableService
     {
         #region Methods
-
+        void PlayMusic(AudioData.Music music, bool loop = false);
+        void PlaySfx(AudioData.Sfx sfx, bool loop = false);
+        void PlayVoice(AudioData.Voice voice, bool loop = false);
         void PlayMusic(AudioClip music, bool loop = false);
         void PlaySfx(AudioClip sfx, bool loop = false);
         void PlayVoice(AudioClip voice, bool loop = false);

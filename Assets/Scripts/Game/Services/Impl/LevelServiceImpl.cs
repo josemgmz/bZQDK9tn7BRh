@@ -51,7 +51,7 @@ namespace Game.Services.Impl
         private CardGridSetupRequest CreateLevel(int columns, int rows)
         {
             var pairs = (columns * rows) / 2;
-            var cards = new List<CardSetupRequest>();
+            var cards = new List<OnCardSetupEvent>();
             var usedPairs = new List<Tuple<CardType, CardShape>>();
 
             for (var j = 0; j < pairs; j++)
@@ -67,7 +67,7 @@ namespace Game.Services.Impl
                 } while (usedPairs.Contains(tuple));
                     
                 usedPairs.Add(new Tuple<CardType, CardShape>(cardType, cardShape));
-                cards.Add(new CardSetupRequest { CardShape = cardShape, CardType = cardType });
+                cards.Add(new OnCardSetupEvent { CardShape = cardShape, CardType = cardType });
             }
 
             var level = new CardGridSetupRequest

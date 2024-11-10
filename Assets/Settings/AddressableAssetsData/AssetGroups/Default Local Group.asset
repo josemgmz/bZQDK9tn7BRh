@@ -277,6 +277,22 @@ MonoBehaviour:
     m_Address: Assets/Content/Textures/Cards/spades_queen.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: b8b9827eff48b8d44bb35ba4beb0d622
+    m_Address: Assets/Content/Sound/SFX/successRound.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fd33717e0d5f82a46b0b82cc9ffa0130
+    m_Address: Assets/Content/Sound/SFX/clickSound.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 341bcf24743d29e48af416aa7665dda0
+    m_Address: Assets/Content/Sound/SFX/successMatching.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5b89f1d2170cb7c409e07e5ecbc5064a
+    m_Address: Assets/Content/Sound/SFX/errorMatching.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: b11fa10cccb15a64ca810574badbdcfa, type: 2}
   m_SchemaSet:

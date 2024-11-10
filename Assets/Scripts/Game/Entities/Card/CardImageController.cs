@@ -21,11 +21,23 @@ namespace Game.Entities.Card
             var model = GetModel<CardModel>();
             model.FrontSprite = GetFrontSprite(model.CardShape, model.CardType);
             model.BackSprite = GetBackSprite();
-
+            
+            if (model.IsFlipped) return;
+            model.Image.sprite = model.BackSprite;
         }
 
         #endregion
 
+        #region Public Methods
+
+        public void FlipCard()
+        {
+            var model = GetModel<CardModel>();
+            model.Image.sprite = model.Image.sprite == model.BackSprite ? model.FrontSprite : model.BackSprite;
+        }
+
+        #endregion
+        
         #region Private Methods
 
         private Sprite GetFrontSprite(CardShape cardShape, CardType cardType)

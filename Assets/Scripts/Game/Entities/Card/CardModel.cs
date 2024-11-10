@@ -8,12 +8,6 @@ namespace Game.Entities.Card
     [Serializable]
     public class CardModel : GameModel
     {
-        #region Constants
-        
-        public const string CARD_FLIP_SFX = "cardFlip.mp3";
-
-        #endregion
-        
         #region Variables
 
         [Header("Components")]
@@ -34,6 +28,7 @@ namespace Game.Entities.Card
         #endregion
 
         #region Properties
+        
         
         public CardType CardType => cardType;
         public CardShape CardShape => cardShape;
