@@ -2,6 +2,9 @@ using System;
 
 namespace Framework
 {
+    /// <summary>
+    /// Represents the base class for game models, providing lifecycle management and cloning capabilities.
+    /// </summary>
     public abstract class GameModel : ICloneable
     {
         #region Lifecycle

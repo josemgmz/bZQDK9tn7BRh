@@ -2,6 +2,9 @@
 
 namespace Framework
 {
+    /// <summary>
+    /// Represents the UI view component in the MVC pattern, handling various pointer and drag events.
+    /// </summary>
     public class GameViewUI : GameView, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerDownHandler, IPointerExitHandler, IPointerUpHandler, IPointerMoveHandler, IPointerEnterHandler
     {
         #region Unity Methods
