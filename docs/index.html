@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Welcome to the Card Matching Game Project </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Welcome to the Card Matching Game Project ">
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/docfx_project/index.md/#L1">
+  </head>
+
+  <script type="module">
+    import options from './public/main.js'
+    import { init } from './public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="welcome-to-the-card-matching-game-project">Welcome to the Card Matching Game Project</h1>
+
+<p>Welcome to the Card Matching Game Project! This project is a card matching game using poker cards, developed with several interesting features and architectural patterns to ensure a robust and maintainable codebase.</p>
+<h2 id="key-features">Key Features</h2>
+<h3 id="model-view-controller-mvc-pattern">Model-View-Controller (MVC) Pattern</h3>
+<p>The project follows a custom-developed Model-View-Controller (MVC) architectural pattern, which helps in separating the concerns of the application:</p>
+<ul>
+<li><strong>Model</strong>: Manages the data and business logic.</li>
+<li><strong>View</strong>: Handles the presentation layer and user interface (MonoBehaviour).</li>
+<li><strong>Controller</strong>: Acts as an intermediary between the Model and View, handling user input and updating the Model and View accordingly.</li>
+</ul>
+<h3 id="dependency-injection">Dependency Injection</h3>
+<p>Dependency Injection is used to manage the services within the project, promoting loose coupling and enhancing testability. This allows for easy swapping of implementations and better management of dependencies.</p>
+<h3 id="event-bus-system">Event Bus System</h3>
+<p>An Event Bus system is implemented to facilitate communication between managers and game objects. This decouples the components, making the system more modular and easier to maintain.</p>
+<h3 id="end-to-end-testing">End-to-End Testing</h3>
+<p>The project includes comprehensive end-to-end tests to ensure the mechanics of the game work as expected. This includes:</p>
+<ul>
+<li><strong>Game Mechanics Tests</strong>: Verifying the core mechanics of the card matching game.</li>
+<li><strong>Level Tests</strong>: Ensuring the functionality and correctness of all 10 levels of the game.</li>
+</ul>
+<h3 id="addressables">Addressables</h3>
+<p>The project utilizes Unity's Addressables system for efficient asset management. This allows for dynamic loading and unloading of assets, improving performance and memory usage.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>To get started with the project, follow the <a href="articles/installation.html">Installation Instructions</a>.</p>
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+<li><a href="api/index.html">API Documentation</a></li>
+<li><a href="articles/license.html">License</a></li>
+</ul>
+<p>We hope you enjoy working on this project and find the architecture and features beneficial for your development process. Happy coding!</p>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/docfx_project/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          No Spoon Tech Lab S.L -  Documentation and library is under the MIT license.<span> - Made with <a href="https://dotnet.github.io/docfx">docfx</a></span> <span>
+        </span></div>
+      </div>
+    </footer>
+  </body>
+</html>

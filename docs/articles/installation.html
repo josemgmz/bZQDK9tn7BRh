@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Installation Instructions for Unity Game Project </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Installation Instructions for Unity Game Project ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/docfx_project/articles/installation.md/#L1">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="installation-instructions-for-unity-game-project">Installation Instructions for Unity Game Project</h1>
+
+<p>This project is a Unity game using Unity 2021.3.45f1 LTS and supports both Android and Windows builds. Follow the steps below to set up the project:</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ol>
+<li><strong>Unity Hub</strong>: Download and install Unity Hub from the <a href="https://unity3d.com/get-unity/download">Unity website</a>.</li>
+<li><strong>Unity Editor</strong>: Install Unity 2021.3.45f1 LTS through Unity Hub.</li>
+<li><strong>Android Build Support</strong>: Ensure you have Android Build Support installed in Unity Hub for Unity 2021.3.45f1 LTS.</li>
+<li><strong>JDK, SDK, and NDK</strong>: Install the required JDK, SDK, and NDK for Android development through Unity Hub.</li>
+</ol>
+<h2 id="project-setup">Project Setup</h2>
+<ol>
+<li><p><strong>Clone the Repository</strong>: Clone the project repository to your local machine.</p>
+<pre><code class="lang-sh">git clone &lt;repository-url&gt;
+cd &lt;repository-directory&gt;
+</code></pre>
+</li>
+<li><p><strong>Open the Project in Unity</strong>:</p>
+<ul>
+<li>Open Unity Hub.</li>
+<li>Click on the <code>Add</code> button and navigate to the cloned project directory.</li>
+<li>Select the project and click <code>Open</code>.</li>
+</ul>
+</li>
+<li><p><strong>Configure Build Settings</strong>:</p>
+<ul>
+<li>Open the project in Unity Editor.</li>
+<li>Go to <code>File</code> &gt; <code>Build Settings</code>.</li>
+<li>Select <code>Android</code> or <code>Windows</code> as the target platform.</li>
+<li>Click on <code>Switch Platform</code>.</li>
+</ul>
+</li>
+<li><p><strong>Android Build Configuration</strong>:</p>
+<ul>
+<li>Go to <code>Edit</code> &gt; <code>Project Settings</code> &gt; <code>Player</code>.</li>
+<li>Under the <code>Android</code> tab, configure the following:
+<ul>
+<li><strong>Company Name</strong>: Set your company name.</li>
+<li><strong>Product Name</strong>: Set your product name.</li>
+<li><strong>Package Name</strong>: Set a unique package name (e.g., <code>com.yourcompany.yourgame</code>).</li>
+<li><strong>Minimum API Level</strong>: Set the minimum API level required (e.g., <code>API Level 21</code>).</li>
+</ul>
+</li>
+<li>Under <code>Other Settings</code>, ensure the <code>Scripting Backend</code> is set to <code>IL2CPP</code> and <code>Target Architectures</code> include <code>ARMv7</code> and <code>ARM64</code>.</li>
+</ul>
+</li>
+<li><p><strong>Windows Build Configuration</strong>:</p>
+<ul>
+<li>Go to <code>Edit</code> &gt; <code>Project Settings</code> &gt; <code>Player</code>.</li>
+<li>Under the <code>Windows</code> tab, configure the following:
+<ul>
+<li><strong>Company Name</strong>: Set your company name.</li>
+<li><strong>Product Name</strong>: Set your product name.</li>
+</ul>
+</li>
+<li>Under <code>Other Settings</code>, ensure the <code>Scripting Backend</code> is set to <code>IL2CPP</code>.</li>
+</ul>
+</li>
+<li><p><strong>Build the Project</strong>:</p>
+<ul>
+<li>Go to <code>File</code> &gt; <code>Build Settings</code>.</li>
+<li>Select the scenes you want to include in the build.</li>
+<li>Click on <code>Build</code> and choose the output directory.</li>
+</ul>
+</li>
+<li><p><strong>Run the Project</strong>:</p>
+<ul>
+<li>For Android: Transfer the APK to your Android device and install it.</li>
+<li>For Windows: Run the executable file generated in the output directory.</li>
+</ul>
+</li>
+</ol>
+<h2 id="additional-notes">Additional Notes</h2>
+<ul>
+<li>Ensure all dependencies and plugins required by the project are correctly installed.</li>
+<li>Follow any additional setup instructions provided in the project documentation.</li>
+</ul>
+<p>By following these steps, you should be able to set up and build the Unity game project for both Android and Windows platforms.</p>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/docfx_project/articles/installation.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          No Spoon Tech Lab S.L -  Documentation and library is under the MIT license.<span> - Made with <a href="https://dotnet.github.io/docfx">docfx</a></span> <span>
+        </span></div>
+      </div>
+    </footer>
+  </body>
+</html>
