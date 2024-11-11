@@ -1,0 +1,989 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AudioServiceImpl
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AudioServiceImpl
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/josemgmz/bZQDK9tn7BRh/new/master/apiSpec/new?filename=Game_Services_Impl_AudioServiceImpl.md&amp;value=---%0Auid%3A%20Game.Services.Impl.AudioServiceImpl%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Game.Services.Impl.AudioServiceImpl">
+
+
+
+  <h1 id="Game_Services_Impl_AudioServiceImpl" data-uid="Game.Services.Impl.AudioServiceImpl" class="text-break">
+    Class AudioServiceImpl
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Game.html">Game</a>.<a class="xref" href="Game.Services.html">Services</a>.<a class="xref" href="Game.Services.Impl.html">Impl</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Game.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AudioServiceImpl : IAudioService, IStartableService, IStoppableService</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">AudioServiceImpl</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Game.Services.IAudioService.html">IAudioService</a></div>
+      <div><a class="xref" href="Game.Services.Lifetime.IStartableService.html">IStartableService</a></div>
+      <div><a class="xref" href="Game.Services.Lifetime.IStoppableService.html">IStoppableService</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_PlayMusic_" data-uid="Game.Services.Impl.AudioServiceImpl.PlayMusic*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_PlayMusic_Game_Services_Data_AudioData_Music_System_Boolean_" data-uid="Game.Services.Impl.AudioServiceImpl.PlayMusic(Game.Services.Data.AudioData.Music,System.Boolean)">
+  PlayMusic(Music, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Plays the specified music.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PlayMusic(AudioData.Music music, bool loop = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>music</code> <a class="xref" href="Game.Services.Data.AudioData.html">AudioData</a>.<a class="xref" href="Game.Services.Data.AudioData.Music.html">Music</a></dt>
+    <dd><p>The music to play.</p>
+</dd>
+    <dt><code>loop</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the music should loop.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_PlayMusic_" data-uid="Game.Services.Impl.AudioServiceImpl.PlayMusic*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_PlayMusic_System_String_System_Boolean_" data-uid="Game.Services.Impl.AudioServiceImpl.PlayMusic(System.String,System.Boolean)">
+  PlayMusic(string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Plays the specified music by name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PlayMusic(string musicName, bool loop)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>musicName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the music to play.</p>
+</dd>
+    <dt><code>loop</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the music should loop.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_PlayMusic_" data-uid="Game.Services.Impl.AudioServiceImpl.PlayMusic*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_PlayMusic_UnityEngine_AudioClip_System_Boolean_" data-uid="Game.Services.Impl.AudioServiceImpl.PlayMusic(UnityEngine.AudioClip,System.Boolean)">
+  PlayMusic(AudioClip, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Plays the specified music clip.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PlayMusic(AudioClip music, bool loop)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>music</code> <span class="xref">AudioClip</span></dt>
+    <dd><p>The music clip to play.</p>
+</dd>
+    <dt><code>loop</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the music should loop.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_PlaySfx_" data-uid="Game.Services.Impl.AudioServiceImpl.PlaySfx*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_PlaySfx_Game_Services_Data_AudioData_Sfx_System_Boolean_" data-uid="Game.Services.Impl.AudioServiceImpl.PlaySfx(Game.Services.Data.AudioData.Sfx,System.Boolean)">
+  PlaySfx(Sfx, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Plays the specified sound effect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PlaySfx(AudioData.Sfx sfx, bool loop = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sfx</code> <a class="xref" href="Game.Services.Data.AudioData.html">AudioData</a>.<a class="xref" href="Game.Services.Data.AudioData.Sfx.html">Sfx</a></dt>
+    <dd><p>The sound effect to play.</p>
+</dd>
+    <dt><code>loop</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the sound effect should loop.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_PlaySfx_" data-uid="Game.Services.Impl.AudioServiceImpl.PlaySfx*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_PlaySfx_System_String_System_Boolean_" data-uid="Game.Services.Impl.AudioServiceImpl.PlaySfx(System.String,System.Boolean)">
+  PlaySfx(string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Plays the specified sound effect by name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PlaySfx(string sfxName, bool loop)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sfxName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the sound effect to play.</p>
+</dd>
+    <dt><code>loop</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the sound effect should loop.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_PlaySfx_" data-uid="Game.Services.Impl.AudioServiceImpl.PlaySfx*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_PlaySfx_UnityEngine_AudioClip_System_Boolean_" data-uid="Game.Services.Impl.AudioServiceImpl.PlaySfx(UnityEngine.AudioClip,System.Boolean)">
+  PlaySfx(AudioClip, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Plays the specified sound effect clip.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PlaySfx(AudioClip sfx, bool loop)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sfx</code> <span class="xref">AudioClip</span></dt>
+    <dd><p>The sound effect clip to play.</p>
+</dd>
+    <dt><code>loop</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the sound effect should loop.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_PlayVoice_" data-uid="Game.Services.Impl.AudioServiceImpl.PlayVoice*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_PlayVoice_Game_Services_Data_AudioData_Voice_System_Boolean_" data-uid="Game.Services.Impl.AudioServiceImpl.PlayVoice(Game.Services.Data.AudioData.Voice,System.Boolean)">
+  PlayVoice(Voice, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Plays the specified voice clip.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PlayVoice(AudioData.Voice voice, bool loop = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>voice</code> <a class="xref" href="Game.Services.Data.AudioData.html">AudioData</a>.<a class="xref" href="Game.Services.Data.AudioData.Voice.html">Voice</a></dt>
+    <dd><p>The voice clip to play.</p>
+</dd>
+    <dt><code>loop</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the voice clip should loop.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_PlayVoice_" data-uid="Game.Services.Impl.AudioServiceImpl.PlayVoice*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_PlayVoice_System_String_System_Boolean_" data-uid="Game.Services.Impl.AudioServiceImpl.PlayVoice(System.String,System.Boolean)">
+  PlayVoice(string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Plays the specified voice clip by name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PlayVoice(string voiceName, bool loop)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>voiceName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the voice clip to play.</p>
+</dd>
+    <dt><code>loop</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the voice clip should loop.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_PlayVoice_" data-uid="Game.Services.Impl.AudioServiceImpl.PlayVoice*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_PlayVoice_UnityEngine_AudioClip_System_Boolean_" data-uid="Game.Services.Impl.AudioServiceImpl.PlayVoice(UnityEngine.AudioClip,System.Boolean)">
+  PlayVoice(AudioClip, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Plays the specified voice clip.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PlayVoice(AudioClip voice, bool loop)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>voice</code> <span class="xref">AudioClip</span></dt>
+    <dd><p>The voice clip to play.</p>
+</dd>
+    <dt><code>loop</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the voice clip should loop.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_SetMasterVolume_" data-uid="Game.Services.Impl.AudioServiceImpl.SetMasterVolume*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_SetMasterVolume_System_Single_" data-uid="Game.Services.Impl.AudioServiceImpl.SetMasterVolume(System.Single)">
+  SetMasterVolume(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L263"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMasterVolume(float volume)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>volume</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_SetMusicVolume_" data-uid="Game.Services.Impl.AudioServiceImpl.SetMusicVolume*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_SetMusicVolume_System_Single_" data-uid="Game.Services.Impl.AudioServiceImpl.SetMusicVolume(System.Single)">
+  SetMusicVolume(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L243"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the volume for music.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMusicVolume(float volume)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>volume</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The volume level to set.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_SetSfxVolume_" data-uid="Game.Services.Impl.AudioServiceImpl.SetSfxVolume*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_SetSfxVolume_System_Single_" data-uid="Game.Services.Impl.AudioServiceImpl.SetSfxVolume(System.Single)">
+  SetSfxVolume(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the volume for sound effects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSfxVolume(float volume)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>volume</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The volume level to set.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_SetVoiceVolume_" data-uid="Game.Services.Impl.AudioServiceImpl.SetVoiceVolume*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_SetVoiceVolume_System_Single_" data-uid="Game.Services.Impl.AudioServiceImpl.SetVoiceVolume(System.Single)">
+  SetVoiceVolume(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L257"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the volume for voice clips.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetVoiceVolume(float volume)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>volume</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The volume level to set.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_Start_" data-uid="Game.Services.Impl.AudioServiceImpl.Start*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_Start" data-uid="Game.Services.Impl.AudioServiceImpl.Start">
+  Start()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Start()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_Stop_" data-uid="Game.Services.Impl.AudioServiceImpl.Stop*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_Stop" data-uid="Game.Services.Impl.AudioServiceImpl.Stop">
+  Stop()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L271"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Stop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_StopAll_" data-uid="Game.Services.Impl.AudioServiceImpl.StopAll*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_StopAll" data-uid="Game.Services.Impl.AudioServiceImpl.StopAll">
+  StopAll()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L183"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops all audio currently playing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopAll()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_StopAllMusic_" data-uid="Game.Services.Impl.AudioServiceImpl.StopAllMusic*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_StopAllMusic" data-uid="Game.Services.Impl.AudioServiceImpl.StopAllMusic">
+  StopAllMusic()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops all music currently playing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopAllMusic()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_StopAllSfx_" data-uid="Game.Services.Impl.AudioServiceImpl.StopAllSfx*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_StopAllSfx" data-uid="Game.Services.Impl.AudioServiceImpl.StopAllSfx">
+  StopAllSfx()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops all sound effects currently playing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopAllSfx()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_StopAllVoice_" data-uid="Game.Services.Impl.AudioServiceImpl.StopAllVoice*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_StopAllVoice" data-uid="Game.Services.Impl.AudioServiceImpl.StopAllVoice">
+  StopAllVoice()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops all voice clips currently playing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopAllVoice()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_StopMusic_" data-uid="Game.Services.Impl.AudioServiceImpl.StopMusic*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_StopMusic_System_String_" data-uid="Game.Services.Impl.AudioServiceImpl.StopMusic(System.String)">
+  StopMusic(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops the specified music by name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopMusic(string musicName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>musicName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the music to stop.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_StopMusic_" data-uid="Game.Services.Impl.AudioServiceImpl.StopMusic*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_StopMusic_UnityEngine_AudioClip_" data-uid="Game.Services.Impl.AudioServiceImpl.StopMusic(UnityEngine.AudioClip)">
+  StopMusic(AudioClip)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops the specified music clip.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopMusic(AudioClip music)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>music</code> <span class="xref">AudioClip</span></dt>
+    <dd><p>The music clip to stop.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_StopSfx_" data-uid="Game.Services.Impl.AudioServiceImpl.StopSfx*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_StopSfx_System_String_" data-uid="Game.Services.Impl.AudioServiceImpl.StopSfx(System.String)">
+  StopSfx(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops the specified sound effect by name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopSfx(string sfxName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sfxName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the sound effect to stop.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_StopSfx_" data-uid="Game.Services.Impl.AudioServiceImpl.StopSfx*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_StopSfx_UnityEngine_AudioClip_" data-uid="Game.Services.Impl.AudioServiceImpl.StopSfx(UnityEngine.AudioClip)">
+  StopSfx(AudioClip)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops the specified sound effect clip.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopSfx(AudioClip sfx)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sfx</code> <span class="xref">AudioClip</span></dt>
+    <dd><p>The sound effect clip to stop.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_StopVoice_" data-uid="Game.Services.Impl.AudioServiceImpl.StopVoice*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_StopVoice_System_String_" data-uid="Game.Services.Impl.AudioServiceImpl.StopVoice(System.String)">
+  StopVoice(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops the specified voice clip by name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopVoice(string voiceName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>voiceName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the voice clip to stop.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Game_Services_Impl_AudioServiceImpl_StopVoice_" data-uid="Game.Services.Impl.AudioServiceImpl.StopVoice*"></a>
+
+  <h3 id="Game_Services_Impl_AudioServiceImpl_StopVoice_UnityEngine_AudioClip_" data-uid="Game.Services.Impl.AudioServiceImpl.StopVoice(UnityEngine.AudioClip)">
+  StopVoice(AudioClip)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops the specified voice clip.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopVoice(AudioClip voice)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>voice</code> <span class="xref">AudioClip</span></dt>
+    <dd><p>The voice clip to stop.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Game/Services/Impl/AudioServiceImpl.cs/#L13" class="edit-link">Edit this page</a>
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          No Spoon Tech Lab S.L -  Documentation and library is under the MIT license.<span> - Made with <a href="https://dotnet.github.io/docfx">docfx</a></span> <span>
+        </span></div>
+      </div>
+    </footer>
+  </body>
+</html>

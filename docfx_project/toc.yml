@@ -1,0 +1,13 @@
+- name: Articles
+  href: articles/
+  expanded: true
+  items:
+    - name: Installation
+      href: articles/installation.md
+    - name: Github
+      href: https://github.com/josemgmz/bZQDK9tn7BRh
+    - name: License
+      href: articles/license.md
+- name: API Documentation
+  href: api/
+  homepage: api/index.md

@@ -1,0 +1,1044 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class GameController&lt;TView&gt;
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class GameController&lt;TView&gt;
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/josemgmz/bZQDK9tn7BRh/new/master/apiSpec/new?filename=Framework_GameController_1.md&amp;value=---%0Auid%3A%20Framework.GameController%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Framework.GameController`1">
+
+
+
+  <h1 id="Framework_GameController_1" data-uid="Framework.GameController`1" class="text-break">
+    Class GameController&lt;TView&gt;
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Framework/GameController.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Framework.html">Framework</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Abstract base class for game controllers, providing common functionality for managing views and models.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class GameController&lt;TView&gt; where TView : GameView</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TView</code></dt>
+    <dd><p>The type of the view associated with the controller.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">GameController&lt;TView&gt;</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Game.Entities.Card.CardAnimationController.html">CardAnimationController</a></div>
+      <div><a class="xref" href="Game.Entities.Card.CardEventController.html">CardEventController</a></div>
+      <div><a class="xref" href="Game.Entities.Card.CardImageController.html">CardImageController</a></div>
+      <div><a class="xref" href="Game.Entities.CardGrid.CardGridController.html">CardGridController</a></div>
+      <div><a class="xref" href="Game.Entities.UIManager.UIManagerController.html">UIManagerController</a></div>
+      <div><a class="xref" href="Game.Entities.UIMenu.UIMenuController.html">UIMenuController</a></div>
+      <div><a class="xref" href="Game.Entities.UITextElement.UITextElementController.html">UITextElementController</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Framework_GameController_1_gameObject_" data-uid="Framework.GameController`1.gameObject*"></a>
+
+  <h3 id="Framework_GameController_1_gameObject" data-uid="Framework.GameController`1.gameObject">
+  gameObject
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Framework/GameController.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the game object of the view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected GameObject gameObject { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Framework_GameController_1_rectTransform_" data-uid="Framework.GameController`1.rectTransform*"></a>
+
+  <h3 id="Framework_GameController_1_rectTransform" data-uid="Framework.GameController`1.rectTransform">
+  rectTransform
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Framework/GameController.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the RectTransform component of the view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected RectTransform rectTransform { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">RectTransform</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Framework_GameController_1_transform_" data-uid="Framework.GameController`1.transform*"></a>
+
+  <h3 id="Framework_GameController_1_transform" data-uid="Framework.GameController`1.transform">
+  transform
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Framework/GameController.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the transform of the view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Transform transform { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Transform</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Framework_GameController_1_Destroy_" data-uid="Framework.GameController`1.Destroy*"></a>
+
+  <h3 id="Framework_GameController_1_Destroy_UnityEngine_Object_" data-uid="Framework.GameController`1.Destroy(UnityEngine.Object)">
+  Destroy(Object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Framework/GameController.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Destroys the specified object or the view if no object is specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Destroy(Object value = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">Object</span></dt>
+    <dd><p>The object to destroy. If null, the view is destroyed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Framework_GameController_1_GetChildControllers_" data-uid="Framework.GameController`1.GetChildControllers*"></a>
+
+  <h3 id="Framework_GameController_1_GetChildControllers__1" data-uid="Framework.GameController`1.GetChildControllers``1">
+  GetChildControllers&lt;TControllerType&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Framework/GameController.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a list of child controllers of a specified type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;TControllerType&gt; GetChildControllers&lt;TControllerType&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;TControllerType&gt;</dt>
+    <dd><p>A list of child controllers of the specified type.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TControllerType</code></dt>
+    <dd><p>The type of the child controllers to get.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Framework_GameController_1_GetChildModels_" data-uid="Framework.GameController`1.GetChildModels*"></a>
+
+  <h3 id="Framework_GameController_1_GetChildModels__1" data-uid="Framework.GameController`1.GetChildModels``1">
+  GetChildModels&lt;TModelType&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Framework/GameController.cs/#L238"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a list of child models of a specified type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;TModelType&gt; GetChildModels&lt;TModelType&gt;() where TModelType : GameModel</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;TModelType&gt;</dt>
+    <dd><p>A list of child models of the specified type.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TModelType</code></dt>
+    <dd><p>The type of the child models to get.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Framework_GameController_1_GetComponent_" data-uid="Framework.GameController`1.GetComponent*"></a>
+
+  <h3 id="Framework_GameController_1_GetComponent__1" data-uid="Framework.GameController`1.GetComponent``1">
+  GetComponent&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Framework/GameController.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a component of a specified type from the view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected T GetComponent&lt;T&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>The component of the specified type.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the component to get.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Framework_GameController_1_GetControllerFromOtherObject_" data-uid="Framework.GameController`1.GetControllerFromOtherObject*"></a>
+
+  <h3 id="Framework_GameController_1_GetControllerFromOtherObject__1_UnityEngine_GameObject_" data-uid="Framework.GameController`1.GetControllerFromOtherObject``1(UnityEngine.GameObject)">
+  GetControllerFromOtherObject&lt;TControllerType&gt;(GameObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Framework/GameController.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a controller of a specified type from another game object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TControllerType GetControllerFromOtherObject&lt;TControllerType&gt;(GameObject value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The game object to get the controller from.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TControllerType</span></dt>
+    <dd><p>The controller of the specified type.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TControllerType</code></dt>
+    <dd><p>The type of the controller to get.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>Thrown if the game object does not have a GameView component.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Framework_GameController_1_GetControllerFromParent_" data-uid="Framework.GameController`1.GetControllerFromParent*"></a>
+
+  <h3 id="Framework_GameController_1_GetControllerFromParent__1" data-uid="Framework.GameController`1.GetControllerFromParent``1">
+  GetControllerFromParent&lt;TControllerType&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Framework/GameController.cs/#L257"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a controller of a specified type from the parent game object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TControllerType GetControllerFromParent&lt;TControllerType&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TControllerType</span></dt>
+    <dd><p>The controller of the specified type.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TControllerType</code></dt>
+    <dd><p>The type of the controller to get.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>Thrown if the parent game object does not have a GameView component.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Framework_GameController_1_GetController_" data-uid="Framework.GameController`1.GetController*"></a>
+
+  <h3 id="Framework_GameController_1_GetController__1" data-uid="Framework.GameController`1.GetController``1">
+  GetController&lt;ControllerType&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Framework/GameController.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a controller of a specified type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ControllerType GetController&lt;ControllerType&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ControllerType</span></dt>
+    <dd><p>The controller of the specified type.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ControllerType</code></dt>
+    <dd><p>The type of the controller to get.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Framework_GameController_1_GetModelFromOtherObject_" data-uid="Framework.GameController`1.GetModelFromOtherObject*"></a>
+
+  <h3 id="Framework_GameController_1_GetModelFromOtherObject__1_UnityEngine_GameObject_" data-uid="Framework.GameController`1.GetModelFromOtherObject``1(UnityEngine.GameObject)">
+  GetModelFromOtherObject&lt;TControllerType&gt;(GameObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Framework/GameController.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a model of a specified type from another game object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TControllerType GetModelFromOtherObject&lt;TControllerType&gt;(GameObject value) where TControllerType : GameModel</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The game object to get the model from.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TControllerType</span></dt>
+    <dd><p>The model of the specified type.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TControllerType</code></dt>
+    <dd><p>The type of the model to get.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>Thrown if the game object does not have a GameView component.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Framework_GameController_1_GetModelFromParent_" data-uid="Framework.GameController`1.GetModelFromParent*"></a>
+
+  <h3 id="Framework_GameController_1_GetModelFromParent__1" data-uid="Framework.GameController`1.GetModelFromParent``1">
+  GetModelFromParent&lt;TModelType&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Framework/GameController.cs/#L270"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a model of a specified type from the parent game object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TModelType GetModelFromParent&lt;TModelType&gt;() where TModelType : GameModel</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TModelType</span></dt>
+    <dd><p>The model of the specified type.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TModelType</code></dt>
+    <dd><p>The type of the model to get.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>Thrown if the parent game object does not have a GameView component.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Framework_GameController_1_GetModel_" data-uid="Framework.GameController`1.GetModel*"></a>
+
+  <h3 id="Framework_GameController_1_GetModel__1" data-uid="Framework.GameController`1.GetModel``1">
+  GetModel&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Framework/GameController.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a model of a specified type from the controller.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected T GetModel&lt;T&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>The model of the specified type.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the model to get.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>Thrown if a model of the specified type is not found.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Framework_GameController_1_GetView_" data-uid="Framework.GameController`1.GetView*"></a>
+
+  <h3 id="Framework_GameController_1_GetView" data-uid="Framework.GameController`1.GetView">
+  GetView()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Framework/GameController.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the view associated with the controller.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TView GetView()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TView</span></dt>
+    <dd><p>The view associated with the controller.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Framework_GameController_1_Instantiate_" data-uid="Framework.GameController`1.Instantiate*"></a>
+
+  <h3 id="Framework_GameController_1_Instantiate_UnityEngine_GameObject_" data-uid="Framework.GameController`1.Instantiate(UnityEngine.GameObject)">
+  Instantiate(GameObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Framework/GameController.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Instantiates a game object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected GameObject Instantiate(GameObject value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The game object to instantiate.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd><p>The instantiated game object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Framework_GameController_1_Instantiate_" data-uid="Framework.GameController`1.Instantiate*"></a>
+
+  <h3 id="Framework_GameController_1_Instantiate_UnityEngine_GameObject_UnityEngine_Transform_" data-uid="Framework.GameController`1.Instantiate(UnityEngine.GameObject,UnityEngine.Transform)">
+  Instantiate(GameObject, Transform)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Framework/GameController.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Instantiates a game object under a specified parent transform.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected GameObject Instantiate(GameObject value, Transform parent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The game object to instantiate.</p>
+</dd>
+    <dt><code>parent</code> <span class="xref">Transform</span></dt>
+    <dd><p>The parent transform to instantiate the game object under.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd><p>The instantiated game object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Framework_GameController_1_Instantiate_" data-uid="Framework.GameController`1.Instantiate*"></a>
+
+  <h3 id="Framework_GameController_1_Instantiate_UnityEngine_GameObject_UnityEngine_Vector3_UnityEngine_Quaternion_" data-uid="Framework.GameController`1.Instantiate(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Quaternion)">
+  Instantiate(GameObject, Vector3, Quaternion)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Framework/GameController.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Instantiates a game object at a specified position and rotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected GameObject Instantiate(GameObject value, Vector3 position, Quaternion rotation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The game object to instantiate.</p>
+</dd>
+    <dt><code>position</code> <span class="xref">Vector3</span></dt>
+    <dd><p>The position to instantiate the game object at.</p>
+</dd>
+    <dt><code>rotation</code> <span class="xref">Quaternion</span></dt>
+    <dd><p>The rotation to instantiate the game object with.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd><p>The instantiated game object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Framework_GameController_1_Instantiate_" data-uid="Framework.GameController`1.Instantiate*"></a>
+
+  <h3 id="Framework_GameController_1_Instantiate_UnityEngine_GameObject_UnityEngine_Vector3_UnityEngine_Quaternion_UnityEngine_Transform_" data-uid="Framework.GameController`1.Instantiate(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Quaternion,UnityEngine.Transform)">
+  Instantiate(GameObject, Vector3, Quaternion, Transform)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Framework/GameController.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Instantiates a game object at a specified position, rotation, and parent transform.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected GameObject Instantiate(GameObject value, Vector3 position, Quaternion rotation, Transform parent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The game object to instantiate.</p>
+</dd>
+    <dt><code>position</code> <span class="xref">Vector3</span></dt>
+    <dd><p>The position to instantiate the game object at.</p>
+</dd>
+    <dt><code>rotation</code> <span class="xref">Quaternion</span></dt>
+    <dd><p>The rotation to instantiate the game object with.</p>
+</dd>
+    <dt><code>parent</code> <span class="xref">Transform</span></dt>
+    <dd><p>The parent transform to instantiate the game object under.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd><p>The instantiated game object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Framework_GameController_1_SetModel_" data-uid="Framework.GameController`1.SetModel*"></a>
+
+  <h3 id="Framework_GameController_1_SetModel__1_System_Object_" data-uid="Framework.GameController`1.SetModel``1(System.Object)">
+  SetModel&lt;T&gt;(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Framework/GameController.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a model for the controller.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetModel&lt;T&gt;(object model)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>model</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The model to set.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the model to set.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>Thrown if a model of the specified type already exists.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Framework_GameController_1_SetView_" data-uid="Framework.GameController`1.SetView*"></a>
+
+  <h3 id="Framework_GameController_1_SetView__0_" data-uid="Framework.GameController`1.SetView(`0)">
+  SetView(TView)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Framework/GameController.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the view for the controller.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetView(TView view)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>view</code> <span class="xref">TView</span></dt>
+    <dd><p>The view to set.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>Thrown if the view is already set.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Framework_GameController_1_StartCoroutine_" data-uid="Framework.GameController`1.StartCoroutine*"></a>
+
+  <h3 id="Framework_GameController_1_StartCoroutine_System_Collections_IEnumerator_" data-uid="Framework.GameController`1.StartCoroutine(System.Collections.IEnumerator)">
+  StartCoroutine(IEnumerator)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Framework/GameController.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts a coroutine on the view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Coroutine StartCoroutine(IEnumerator coroutine)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>coroutine</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd><p>The coroutine to start.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Coroutine</span></dt>
+    <dd><p>The started coroutine.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/josemgmz/bZQDK9tn7BRh/blob/master/Assets/Scripts/Framework/GameController.cs/#L13" class="edit-link">Edit this page</a>
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          No Spoon Tech Lab S.L -  Documentation and library is under the MIT license.<span> - Made with <a href="https://dotnet.github.io/docfx">docfx</a></span> <span>
+        </span></div>
+      </div>
+    </footer>
+  </body>
+</html>
