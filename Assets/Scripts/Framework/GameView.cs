@@ -9,6 +9,9 @@ using VContainer.Unity;
 
 namespace Framework
 {
+    /// <summary>
+    /// Represents the view component in the MVC pattern, managing the lifecycle and interactions of models and controllers.
+    /// </summary>
     public class GameView : MonoBehaviour
     {
         #region Variables
