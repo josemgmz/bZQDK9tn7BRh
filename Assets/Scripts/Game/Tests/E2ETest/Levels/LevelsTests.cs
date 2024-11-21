@@ -105,13 +105,13 @@ namespace Game.Tests.E2ETest.Levels
             GetInstance<IRoundService>().SetRound(level);
             GetInstance<IRoundService>().EndRound(false);
             
-            yield return new WaitForSeconds(2.0f);
+            yield return new WaitForSeconds(4.50f);
             var startRound = GetInstance<IRoundService>().GetRound();
             
             var play = GameObject.Find(PLAY_BUTTON_OBJECT);
             yield return PerformDrag(play.transform.position, play.transform.position + Vector3.down, 0.25f, RenderMode.ScreenSpaceCamera);
 
-            yield return new WaitForSeconds(5.0f);
+            yield return new WaitForSeconds(7.25f);
             var cardGrid = GameObject.Find(CARD_GRID_OBJECT);
             var cards = cardGrid.GetComponentsInChildren<CardView>();
             
@@ -123,10 +123,10 @@ namespace Game.Tests.E2ETest.Levels
                 foreach (var card in pair)
                 {
                     yield return PerformDrag(card.transform.position, card.transform.position + Vector3.down, 0.25f, RenderMode.ScreenSpaceCamera);
-                    yield return new WaitForSeconds(0.25f);
+                    yield return new WaitForSeconds(0.75f);
                 }
             }
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(2.0f);
 
             var endRound = GetInstance<IRoundService>().GetRound();
             Assert.AreEqual(startRound + 1, endRound);
